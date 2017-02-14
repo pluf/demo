@@ -1,6 +1,7 @@
 # Eclipse
 .project
 .settings
+/.buildpath
 
 # Composer
 /vendor/
@@ -13,4 +14,3 @@ storage/tenant
 
 # KDE
 .directory
-/.buildpath
