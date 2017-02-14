@@ -1,0 +1,26 @@
+{
+    "name": "pluf/demo",
+    "description": "A simple demo project to test todo package.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostafa Barmshory",
+            "email": "mostafa.barmshory@dpq.co.ir"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "~/git/pluf/todo",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+    	"pluf/todo": "*"
+    }
+}
