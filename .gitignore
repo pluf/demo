@@ -6,10 +6,11 @@
 /vendor/
 composer.lock
 composer-setup.php
-coposer.phar
+composer.phar
 
 # Project
 storage/tenant
 
 # KDE
 .directory
+/.buildpath
