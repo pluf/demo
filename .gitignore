@@ -4,6 +4,9 @@
 
 # Composer
 /vendor/
+composer.lock
+composer-setup.php
+coposer.phar
 
 # Project
 storage/tenant
