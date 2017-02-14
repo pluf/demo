@@ -1,0 +1,12 @@
+# Eclipse
+.project
+.settings
+
+# Composer
+/vendor/
+
+# Project
+storage/tenant
+
+# KDE
+.directory

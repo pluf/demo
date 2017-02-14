@@ -1,0 +1,49 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e35bb159ccaf0878769a4f3e408db07b",
+    "packages": [
+        {
+            "name": "pluf/todo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pluf/todo.git",
+                "reference": "eecfa0642a2b79d1ab307c8713bda0e9395210d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v3/projects/pluf%2Ftodo/repository/archive.zip?sha=eecfa0642a2b79d1ab307c8713bda0e9395210d7",
+                "reference": "eecfa0642a2b79d1ab307c8713bda0e9395210d7",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "src/"
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mostafa Barmshory",
+                    "email": "mostafa.barmshory@dpq.co.ir"
+                }
+            ],
+            "description": "Todo package of pluf",
+            "time": "2017-02-13 21:09:27"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
