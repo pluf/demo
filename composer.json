@@ -12,6 +12,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
+    	"pluf/installer": "0.1.*",
     	"pluf/todo": "0.1.*"
     }
 }

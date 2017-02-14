@@ -1,9 +1,17 @@
 <?php
-define ( "PLUF_BASE", dirname ( __FILE__ ) . '/vendor/pluf/pluf/src' );
+define ( "PLUF_BASE", dirname ( __FILE__ ) . '/vendor/pluf/core/src' );
 define ( "SRC_BASE", dirname ( __FILE__ ) . '/storage' );
 
 require 'vendor/autoload.php';
 require 'Pluf.php';
+
+/*
+ * NOTE: Remove if block in real installation.
+ */
+if (!file_exists('config.php')) {
+    include dirname ( __FILE__ ) . '/vendor/pluf/installer/index.php';
+    return;
+}
 
 Pluf::start ('config.php' );
 Pluf_Dispatcher::loadControllers ( 'urls.php' );

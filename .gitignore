@@ -11,6 +11,8 @@ composer.phar
 
 # Project
 storage/tenant
+/config.php
+/urls.php
 
 # KDE
 .directory
