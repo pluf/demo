@@ -13,6 +13,7 @@
     "prefer-stable": true,
     "require": {
     	"pluf/installer": "0.1.*",
-    	"pluf/todo": "0.1.*"
+    	"pluf/todo": "0.1.*",
+        "zikula/Wizard": "^1.4"
     }
 }
