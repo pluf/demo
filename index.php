@@ -9,9 +9,10 @@ require 'vendor/autoload.php';
  */
 if (!file_exists('config.php')) {
     include dirname ( __FILE__ ) . '/vendor/pluf/installer/index.php';
-} else {
-    require 'Pluf.php';
-    Pluf::start ('config.php' );
-    Pluf_Dispatcher::loadControllers ( 'urls.php' );
-    Pluf_Dispatcher::dispatch ( Pluf_HTTP_URL::getAction () );
+    return;
 }
+
+require 'Pluf.php';
+Pluf::start ('config.php' );
+Pluf_Dispatcher::loadControllers ( 'urls.php' );
+Pluf_Dispatcher::dispatch ( Pluf_HTTP_URL::getAction () );
