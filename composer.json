@@ -14,8 +14,7 @@
 	"prefer-stable" : true,
 	"require" : {
 		"pluf/installer" : "^0.1.0",
-		"pluf/spa" : "^0.1.0",
-		"pluf/todo" : "^0.1.0"
+		"pluf/spa" : "^0.1.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
