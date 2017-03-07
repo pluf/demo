@@ -8,13 +8,21 @@
 			"email" : "mostafa.barmshory@dpq.co.ir",
 			"homepage" : "http://dpq.co.ir",
 			"role" : "developer"
+		}, {
+			"name" : "Mohammad Hadi Mansouri",
+			"email" : "mohammad.hadi.mansouri@dpq.co.ir",
+			"homepage" : "http://dpq.co.ir",
+			"role" : "developer"
 		}
 	],
 	"minimum-stability" : "stable",
 	"prefer-stable" : true,
 	"require" : {
 		"pluf/installer" : "^0.1.0",
-		"pluf/spa" : "^0.1.0"
+		"pluf/spa" : "^0.1.0",
+		"pluf/cache" : "^0.1.0",
+		"pluf/cms" : "^0.1.0",
+		"pluf/sdp" : "^0.1.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
