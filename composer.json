@@ -22,7 +22,9 @@
 		"pluf/spa" : "^0.1.0",
 		"pluf/cache" : "^0.1.0",
 		"pluf/cms" : "^0.1.0",
-		"pluf/sdp": "^0.1.0"
+		"pluf/sdp": "^0.1.0",
+		"pluf/core": "^2.0",
+		"pluf/bank": "^0.1.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
