@@ -23,7 +23,7 @@
 		"pluf/cache" : "^0.1.0",
 		"pluf/cms" : "^0.1.0",
 		"pluf/sdp" : "^0.1.0",
-		"pluf/core" : "^2.0",
+		"pluf/core" : "^2.1.0",
 		"pluf/bank" : "^0.1.0",
 		"pluf/seo" : "^0.1.0"
 	},
