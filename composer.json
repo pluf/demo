@@ -1,26 +1,49 @@
 {
-    "name": "pluf/demo",
-    "description": "A simple demo project to test todo package.",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mostafa Barmshory",
-            "email": "mostafa.barmshory@dpq.co.ir"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "~/git/pluf/todo",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
-    "require": {
-    	"pluf/todo": "*"
-    }
+	"name" : "pluf/demo",
+	"description" : "A simple demo project",
+	"type" : "project",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Mostafa Barmshory",
+			"email" : "mostafa.barmshory@dpq.co.ir",
+			"homepage" : "http://dpq.co.ir",
+			"role" : "developer"
+		}, {
+			"name" : "Mohammad Hadi Mansouri",
+			"email" : "mohammad.hadi.mansouri@dpq.co.ir",
+			"homepage" : "http://dpq.co.ir",
+			"role" : "developer"
+		}
+	],
+	"minimum-stability" : "stable",
+	"prefer-stable" : true,
+	"require" : {
+		"pluf/installer" : "^0.1.0",
+		"pluf/spa" : "^0.1.0",
+		"pluf/cache" : "^0.1.0",
+		"pluf/cms" : "^0.1.0",
+		"pluf/sdp" : "^0.1.0",
+		"pluf/core" : "^2.1.0",
+		"pluf/bank" : "^0.1.0",
+		"pluf/seo" : "^0.1.0",
+		"pluf/collection" : "^0.1.0",
+		"pluf/shop" : "^0.1.0"
+	},
+	"repositories" : [{
+			"type" : "vcs",
+			"url" : "https://gitlab.com/microshop/shop"
+		}
+	],
+	"homepage" : "https://github.com/pluf/demo",
+	"support" : {
+		"email" : "info@pluf.ir",
+		"issues" : "https://github.com/pluf/demo/issues",
+		"wiki" : "https://github.com/pluf/demo/wiki",
+		"source" : "https://github.com/pluf/demo"
+	},
+	"keywords" : [
+		"pluf",
+		"site",
+		"demo"
+	]
 }

@@ -1,12 +1,18 @@
 # Eclipse
 .project
 .settings
+/.buildpath
 
 # Composer
 /vendor/
+composer.lock
+composer-setup.php
+composer.phar
 
 # Project
 storage/tenant
+/config.php
+/urls.php
 
 # KDE
 .directory
