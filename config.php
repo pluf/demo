@@ -28,6 +28,7 @@ return array(
         ),
         'middleware_classes' => array(
                 'Pluf_Middleware_Session',
+                'Pluf_Middleware_BasicAuth',
                 'Pluf_Middleware_Translation',
                 'Pluf_Middleware_TenantEmpty',
                 'Pluf_Middleware_TenantFromHeader',
