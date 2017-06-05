@@ -26,14 +26,8 @@
 		"pluf/core" : "^2.1.0",
 		"pluf/bank" : "^0.1.0",
 		"pluf/seo" : "^0.1.0",
-		"pluf/collection" : "^0.1.0",
-		"pluf/shop" : "^0.1.0"
+		"pluf/collection" : "^0.1.0"
 	},
-	"repositories" : [{
-			"type" : "vcs",
-			"url" : "https://gitlab.com/microshop/shop"
-		}
-	],
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
 		"email" : "info@pluf.ir",
