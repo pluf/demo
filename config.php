@@ -24,7 +24,8 @@ return array(
         'Book',
         'Backup',
         'Seo',
-        'Collection'
+        'Collection',
+        'Assort'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -77,7 +78,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'test',
+    'db_database' => 'plufdemo4',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -85,6 +86,6 @@ return array(
     'tenant_default' => 'www',
     'multitenant' => false,
     'bank_debug' => false,
-    'migrate_allow_web' => false
+    'migrate_allow_web' => true
 );
 

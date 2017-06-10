@@ -96,6 +96,11 @@ return array(
                 'base' => $base,
                 'sub' => include 'Collection/urls.php'
         ),
+        array (
+                'regex' => '#^/api/assort#',
+                'base' => $base,
+                'sub' => include 'Assort/urls.php'
+        ),
         array ( // SaaS : online applications
                 'regex' => '#^#',
                 'base' => $base,
