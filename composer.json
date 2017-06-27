@@ -18,22 +18,17 @@
 	"minimum-stability" : "stable",
 	"prefer-stable" : true,
 	"require" : {
-		"pluf/installer" : "^0.1.0",
-		"pluf/spa" : "^0.1.0",
-		"pluf/cache" : "^0.1.0",
-		"pluf/cms" : "^0.1.0",
-		"pluf/sdp" : "^0.1.0",
-		"pluf/core" : "^2.1.0",
-		"pluf/bank" : "^0.1.0",
-		"pluf/seo" : "^0.1.0",
-		"pluf/collection" : "^0.1.0",
-		"pluf/shop" : "^0.1.0"
+		"pluf/installer" : "^2.1.0",
+		"pluf/spa" : "^2.1.0",
+		"pluf/cache" : "^2.1.0",
+		"pluf/cms" : "^2.1.0",
+		"pluf/sdp" : "^2.1.0",
+		"pluf/core" : "^2.1.1",
+		"pluf/bank" : "^2.1.0",
+		"pluf/seo" : "^2.1.0",
+		"pluf/collection" : "^2.1.0",
+		"pluf/assort" : "^0.1.0"
 	},
-	"repositories" : [{
-			"type" : "vcs",
-			"url" : "https://gitlab.com/microshop/shop"
-		}
-	],
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
 		"email" : "info@pluf.ir",
