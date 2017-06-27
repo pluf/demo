@@ -78,7 +78,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'plufdemo4',
+    'db_database' => 'test',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
