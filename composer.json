@@ -27,7 +27,7 @@
 		"pluf/bank" : "^2.1.0",
 		"pluf/seo" : "^2.1.0",
 		"pluf/collection" : "^2.1.0",
-		"pluf/assort" : "^0.1.0"
+		"pluf/assort" : "^2.1.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
