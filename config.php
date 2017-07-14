@@ -84,7 +84,7 @@ return array(
     'mail_backend' => 'mail',
     
     'tenant_default' => 'www',
-    'multitenant' => false,
+    'multitenant' => true,
     'bank_debug' => false,
     'migrate_allow_web' => true
 );
