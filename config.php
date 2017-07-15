@@ -1,4 +1,7 @@
 <?php
+
+// TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
+Pluf::loadFunction('Geo_DB_PointToDB');
 return array(
     'general_domain' => 'digidoki.com',
     'general_admin_email' => array(
@@ -83,9 +86,26 @@ return array(
     
     'mail_backend' => 'mail',
     
+    'user_profile_class' => 'User_Profile',
+    
     'tenant_default' => 'www',
     'multitenant' => true,
     'bank_debug' => false,
-    'migrate_allow_web' => true
+    'migrate_allow_web' => true,
+    
+    'orm.typecasts' => array(
+        'Geo_DB_Field_Polygon' => array(
+            'Geo_DB_GeometryFromDb',
+            'Geo_DB_PolygonToDb'
+        ),
+        'Geo_DB_Field_Geometry' => array(
+            'Geo_DB_GeometryFromDb',
+            'Geo_DB_GeometryToDb'
+        ),
+        'Geo_DB_Field_Point' => array(
+            'Geo_DB_GeometryFromDb',
+            'Geo_DB_PointToDb'
+        )
+    )
 );
 
