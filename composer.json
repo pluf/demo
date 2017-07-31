@@ -28,6 +28,7 @@
 		"pluf/seo" : "^2.1.0",
 		"pluf/collection" : "^2.1.0",
 		"pluf/assort" : "^2.1.0",
+		"pluf/http2" : "^2.1.0",
 		"pluf/restlog": "^2.1.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
