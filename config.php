@@ -28,7 +28,8 @@ return array(
         'Backup',
         'Seo',
         'Collection',
-        'Assort'
+        'Assort',
+        'RestLog'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -37,9 +38,11 @@ return array(
         'Pluf_Middleware_TenantEmpty',
         'Pluf_Middleware_TenantFromHeader',
         'Pluf_Middleware_TenantFromDomain',
+        	'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         'Seo_Middleware_Render',
-        'Cache_Middleware_RFC7234'
+        'Cache_Middleware_RFC7234',
+        'RestLog_Middleware_Audit'
     ),
     'debug' => true,
     
