@@ -29,7 +29,8 @@ return array(
         'Seo',
         'Collection',
         'Assort',
-        'RestLog'
+        'RestLog',
+         'Shop'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
