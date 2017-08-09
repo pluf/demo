@@ -30,7 +30,8 @@ return array(
         'Collection',
         'Assort',
         'RestLog',
-         'Shop'
+        'Shop',
+        'Marketplace'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
