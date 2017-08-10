@@ -111,6 +111,8 @@ return array(
             'Geo_DB_GeometryFromDb',
             'Geo_DB_PointToDb'
         )
-    )
+    ),
+    
+    'marketplace.backend' => 'http://localhost:8080',
 );
 
