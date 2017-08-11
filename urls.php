@@ -58,8 +58,13 @@ $api = array(
         'regex' => '#^/api/assort#',
         'base' => $base,
         'sub' => include 'Assort/urls.php'
+    ),
+    array(
+        'app' => 'Monitor',
+        'regex' => '#^/api/monitor#',
+        'base' => $base,
+        'sub' => include 'Monitor/urls.php'
     )
-
 );
 
 /*
@@ -77,12 +82,6 @@ $spec = array(
         'regex' => '#^/api/wiki#',
         'base' => $base,
         'sub' => include 'Book/urls.php'
-    ),
-    array(
-        'app' => 'Monitor',
-        'regex' => '#^/api/monitor#',
-        'base' => $base,
-        'sub' => include 'Monitor/urls.php'
     ),
     array(
         'app' => 'SaaSDM',
