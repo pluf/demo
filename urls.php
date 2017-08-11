@@ -133,17 +133,17 @@ $spec = array(
         'sub' => include 'Collection/urls.php'
     ),
     array(
-        'app' => 'Shop',
-        'regex' => '#^/api/shop#',
-        'base' => $base,
-        'sub' => include 'Shop/urls.php'
-    ),
-    array(
         'app' => 'Marketplace',
         'regex' => '#^/api/marketplace#',
         'base' => $base,
         'sub' => include 'Marketplace/urls.php'
-    )
+    ),
+//     array(
+//         'app' => 'Shop',
+//         'regex' => '#^/api/shop#',
+//         'base' => $base,
+//         'sub' => include 'Shop/urls.php'
+//     ),
 );
 
 foreach ($spec as $moduleApi) {
