@@ -1,4 +1,7 @@
 <?php
+
+// TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
+Pluf::loadFunction('Geo_DB_PointToDB');
 return array(
     'general_domain' => 'digidoki.com',
     'general_admin_email' => array(
@@ -25,7 +28,10 @@ return array(
         'Backup',
         'Seo',
         'Collection',
-        'Assort'
+        'Assort',
+        'RestLog',
+        'Marketplace',
+//         'Shop',
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -34,9 +40,11 @@ return array(
         'Pluf_Middleware_TenantEmpty',
         'Pluf_Middleware_TenantFromHeader',
         'Pluf_Middleware_TenantFromDomain',
+       	'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         'Seo_Middleware_Render',
-        'Cache_Middleware_RFC7234'
+        'Cache_Middleware_RFC7234',
+        'RestLog_Middleware_Audit'
     ),
     'debug' => true,
     
@@ -83,9 +91,28 @@ return array(
     
     'mail_backend' => 'mail',
     
+    'user_profile_class' => 'User_Profile',
+    
     'tenant_default' => 'www',
-    'multitenant' => false,
+    'multitenant' => true,
     'bank_debug' => false,
-    'migrate_allow_web' => true
+    'migrate_allow_web' => true,
+    
+    'orm.typecasts' => array(
+        'Geo_DB_Field_Polygon' => array(
+            'Geo_DB_GeometryFromDb',
+            'Geo_DB_PolygonToDb'
+        ),
+        'Geo_DB_Field_Geometry' => array(
+            'Geo_DB_GeometryFromDb',
+            'Geo_DB_GeometryToDb'
+        ),
+        'Geo_DB_Field_Point' => array(
+            'Geo_DB_GeometryFromDb',
+            'Geo_DB_PointToDb'
+        )
+    ),
+    
+    'marketplace.backend' => 'http://localhost:8080',
 );
 
