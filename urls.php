@@ -36,6 +36,12 @@ $api = array(
         'sub' => include 'Spa/urls.php'
     ),
     array(
+        'app' => 'Spa',
+        'regex' => '#^/api/repository#',
+        'base' => $base,
+        'sub' => include 'Spa/urls-repository.php'
+    ),
+    array(
         'app' => 'Message',
         'regex' => '#^/api/message#',
         'base' => $base,
