@@ -7,13 +7,13 @@ require 'vendor/autoload.php';
 /*
  * NOTE: Remove if block in real installation.
  */
-if (!file_exists('config.php')) {
-    include dirname ( __FILE__ ) . '/vendor/pluf/installer/index.php';
-    return;
-}
-// // Uncomment to install
-ini_set('display_errors', 'on');
-error_reporting(E_ALL);
+// if (!file_exists('config.php')) {
+//     include dirname ( __FILE__ ) . '/vendor/pluf/installer/index.php';
+//     return;
+// }
+// // // Uncomment to install
+// ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
 // header('Content-Type: text/plain');
 // try {
 //     global $what;
