@@ -31,7 +31,7 @@ return array(
         'Assort',
         'RestLog',
         'Marketplace',
-//         'Shop',
+        'Discount'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -40,10 +40,11 @@ return array(
         'Pluf_Middleware_TenantEmpty',
         'Pluf_Middleware_TenantFromHeader',
         'Pluf_Middleware_TenantFromDomain',
-       	'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
+        'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
+        'Pluf_Middleware_UserSpace', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
     ),
     'debug' => true,
@@ -114,5 +115,7 @@ return array(
     ),
     
     'marketplace.backend' => 'http://localhost:8080',
+    
+    'test_unit' => false,
 );
 
