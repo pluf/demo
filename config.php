@@ -87,7 +87,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'plufdemo3',
+    'db_database' => 'test',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -96,7 +96,7 @@ return array(
     
     'tenant_default' => 'www',
     'multitenant' => true,
-    'bank_debug' => true,
+    'bank_debug' => false,
     'migrate_allow_web' => true,
     
     'orm.typecasts' => array(
