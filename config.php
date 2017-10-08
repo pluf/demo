@@ -3,12 +3,12 @@
 // TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
 Pluf::loadFunction('Geo_DB_PointToDB');
 return array(
-    'general_domain' => 'digidoki.com',
+    'general_domain' => 'pluf.ir',
     'general_admin_email' => array(
-        'info@digidoki.com'
+        'info@pluf.ir'
     ),
-    'general_from_email' => 'info@digidoki.com',
-    'general_new_request_mail_title' => 'DigiDoki Request',
+    'general_from_email' => 'info@pluf.ir',
+    'general_new_request_mail_title' => 'Pluf Request',
     'installed_apps' => array(
         'Pluf',
         'User',
@@ -87,7 +87,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'test',
+    'db_database' => 'plufdemo3',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -96,7 +96,7 @@ return array(
     
     'tenant_default' => 'www',
     'multitenant' => true,
-    'bank_debug' => false,
+    'bank_debug' => true,
     'migrate_allow_web' => true,
     
     'orm.typecasts' => array(
