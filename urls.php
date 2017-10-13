@@ -143,12 +143,12 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Marketplace/urls.php'
     ),
-//     array(
-//         'app' => 'Shop',
-//         'regex' => '#^/api/shop#',
-//         'base' => $base,
-//         'sub' => include 'Shop/urls.php'
-//     ),
+    array(
+        'app' => 'Discount',
+        'regex' => '#^/api/discount#',
+        'base' => $base,
+        'sub' => include 'Discount/urls.php'
+    ),
 );
 
 foreach ($spec as $moduleApi) {
