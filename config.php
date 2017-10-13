@@ -113,6 +113,6 @@ return array(
         )
     ),
     
-    'marketplace.backend' => 'http://localhost:8080',
+    'marketplace.backend' => 'http://marketplace.webpich.com',
 );
 
