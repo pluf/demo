@@ -89,12 +89,12 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Book/urls.php'
     ),
-    array(
-        'app' => 'SaaSDM',
-        'regex' => '#^/api/dm#',
-        'base' => $base,
-        'sub' => include 'SaaSDM/urls.php'
-    ),
+//     array(
+//         'app' => 'SaaSDM',
+//         'regex' => '#^/api/dm#',
+//         'base' => $base,
+//         'sub' => include 'SaaSDM/urls.php'
+//     ),
     array(
         'app' => 'SDP',
         'regex' => '#^/api/sdp#',

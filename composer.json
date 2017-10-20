@@ -30,7 +30,7 @@
 		"pluf/collection" : "^2.1.0",
 		"pluf/assort" : "^2.1.0",
 		"pluf/http2" : "^2.1.0",
-		"pluf/restlog": "^2.1.0",
+		"pluf/restlog" : "^2.1.0",
 		"pluf/geo" : "^2.1.0",
 		"pluf/marketplace" : "^2.1.0",
 		"pluf/discount" : "^2.1.0"
