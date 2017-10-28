@@ -31,7 +31,8 @@ return array(
         'Assort',
         'RestLog',
         'Marketplace',
-        'Discount'
+        'Discount',
+        'ELearn'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
