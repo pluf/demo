@@ -143,11 +143,17 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Marketplace/urls.php'
     ),
-    array(
+    array( // Discount
         'app' => 'Discount',
         'regex' => '#^/api/discount#',
         'base' => $base,
         'sub' => include 'Discount/urls.php'
+    ),
+    array ( // ELearn
+        'app' => 'ELearn',
+        'regex' => '#^/api/elearn#',
+        'base' => $base,
+        'sub' => include 'ELearn/urls.php'
     ),
 );
 
