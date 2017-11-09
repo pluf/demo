@@ -89,12 +89,12 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Book/urls.php'
     ),
-    array(
-        'app' => 'SaaSDM',
-        'regex' => '#^/api/dm#',
-        'base' => $base,
-        'sub' => include 'SaaSDM/urls.php'
-    ),
+//     array(
+//         'app' => 'SaaSDM',
+//         'regex' => '#^/api/dm#',
+//         'base' => $base,
+//         'sub' => include 'SaaSDM/urls.php'
+//     ),
     array(
         'app' => 'SDP',
         'regex' => '#^/api/sdp#',
@@ -143,12 +143,18 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Marketplace/urls.php'
     ),
-//     array(
-//         'app' => 'Shop',
-//         'regex' => '#^/api/shop#',
-//         'base' => $base,
-//         'sub' => include 'Shop/urls.php'
-//     ),
+    array( // Discount
+        'app' => 'Discount',
+        'regex' => '#^/api/discount#',
+        'base' => $base,
+        'sub' => include 'Discount/urls.php'
+    ),
+    array ( // ELearn
+        'app' => 'ELearn',
+        'regex' => '#^/api/elearn#',
+        'base' => $base,
+        'sub' => include 'ELearn/urls.php'
+    ),
 );
 
 foreach ($spec as $moduleApi) {

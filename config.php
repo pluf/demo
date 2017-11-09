@@ -3,12 +3,12 @@
 // TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
 Pluf::loadFunction('Geo_DB_PointToDB');
 return array(
-    'general_domain' => 'digidoki.com',
+    'general_domain' => 'pluf.ir',
     'general_admin_email' => array(
-        'info@digidoki.com'
+        'info@pluf.ir'
     ),
-    'general_from_email' => 'info@digidoki.com',
-    'general_new_request_mail_title' => 'DigiDoki Request',
+    'general_from_email' => 'info@pluf.ir',
+    'general_new_request_mail_title' => 'Pluf Request',
     'installed_apps' => array(
         'Pluf',
         'User',
@@ -31,7 +31,8 @@ return array(
         'Assort',
         'RestLog',
         'Marketplace',
-//         'Shop',
+        'Discount',
+        'ELearn'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -40,10 +41,11 @@ return array(
         'Pluf_Middleware_TenantEmpty',
         'Pluf_Middleware_TenantFromHeader',
         'Pluf_Middleware_TenantFromDomain',
-       	'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
+        'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
+        'Pluf_Middleware_UserSpace', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
     ),
     'debug' => true,
@@ -113,6 +115,6 @@ return array(
         )
     ),
     
-    'marketplace.backend' => 'http://localhost:8080',
+    'marketplace.backend' => 'http://marketplace.webpich.com',
 );
 
