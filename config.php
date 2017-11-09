@@ -15,6 +15,7 @@ return array(
         'Group',
         'Role',
         'Tenant',
+	'SuperTenant',
         'CMS',
         'Bank',
         'Config',
