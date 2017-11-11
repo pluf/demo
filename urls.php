@@ -78,12 +78,6 @@ $api = array(
  */
 $spec = array(
     array(
-        'app' => 'Tenant',
-        'regex' => '#^/api/tenant#',
-        'base' => $base,
-        'sub' => include 'Tenant/urls.php'
-    ),
-    array(
         'app' => 'Book',
         'regex' => '#^/api/wiki#',
         'base' => $base,
@@ -171,7 +165,7 @@ if (Config_Service::get('module.tenant.enable', FALSE)) {
 		'app' => 'SuperTenant',
 		'regex' => '#^/api/tenant#',
 		'base' => $base,
-		'sub' => include 'Tenant/urls.php'
+		'sub' => include 'SuperTenant/urls.php'
 	));
 } else {
 	array_push($api, array ( // ELearn
