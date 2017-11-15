@@ -15,7 +15,7 @@ return array(
         'Group',
         'Role',
         'Tenant',
-	'SuperTenant',
+        'SuperTenant',
         'CMS',
         'Bank',
         'Config',
@@ -116,6 +116,6 @@ return array(
         )
     ),
     
-    'marketplace.backend' => 'http://marketplace.webpich.com',
+    'marketplace.backend' => 'http://marketplace.webpich.com'
 );
 
