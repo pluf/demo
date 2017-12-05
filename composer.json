@@ -38,7 +38,8 @@
 		"pluf/tenant" : "^2.1.0",
 		"pluf/supertenant" : "^2.1.0",
 		"pluf/book" : "^2.1.0",
-		"pluf/backup": "^2.1.0"
+		"pluf/backup" : "^2.1.0",
+		"pluf/captcha" : "^2.1.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {

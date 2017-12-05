@@ -15,7 +15,7 @@ return array(
         'Group',
         'Role',
         'Tenant',
-	'SuperTenant',
+        'SuperTenant',
         'CMS',
         'Bank',
         'Config',
@@ -33,7 +33,8 @@ return array(
         'RestLog',
         'Marketplace',
         'Discount',
-        'ELearn'
+        'ELearn',
+        'Captcha'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -44,6 +45,7 @@ return array(
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
+        'Captcha_Middleware_Verifier', // Must be affter session and tenant
         'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'Pluf_Middleware_UserSpace', // It should be one of lastest middlewares
