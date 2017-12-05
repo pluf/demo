@@ -161,16 +161,16 @@ foreach ($spec as $moduleApi) {
  * To add tenant api (in super mode or basic mode)
  */
 if (Config_Service::get('module.tenant.enable', FALSE)) {
-	array_push($api, array ( // ELearn
+	array_push($api, array ( // Super Tenant
 		'app' => 'SuperTenant',
-		'regex' => '#^/api/tenant#',
+		'regex' => '#^/api/saas#',
 		'base' => $base,
 		'sub' => include 'SuperTenant/urls.php'
 	));
 } else {
-	array_push($api, array ( // ELearn
+	array_push($api, array ( // Tenant
 		'app' => 'Tenant',
-		'regex' => '#^/api/tenant#',
+		'regex' => '#^/api/saas#',
 		'base' => $base,
 		'sub' => include 'Tenant/urls.php'
 	));
