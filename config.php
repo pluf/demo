@@ -91,7 +91,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'test',
+    'db_database' => 'demo',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
