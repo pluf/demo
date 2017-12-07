@@ -15,6 +15,7 @@ return array(
         'Group',
         'Role',
         'Tenant',
+        'SuperTenant',
         'CMS',
         'Bank',
         'Config',
@@ -32,7 +33,8 @@ return array(
         'RestLog',
         'Marketplace',
         'Discount',
-        'ELearn'
+        'ELearn',
+        'Captcha'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
@@ -43,7 +45,8 @@ return array(
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
-        'Seo_Middleware_Render',
+        'Captcha_Middleware_Verifier', // Must be affter session and tenant
+        //'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'Pluf_Middleware_UserSpace', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
@@ -88,7 +91,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'test',
+    'db_database' => 'demo',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -115,6 +118,6 @@ return array(
         )
     ),
     
-    'marketplace.backend' => 'http://marketplace.webpich.com',
+    'marketplace.backend' => 'http://marketplace.webpich.com'
 );
 

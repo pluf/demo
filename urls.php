@@ -78,12 +78,6 @@ $api = array(
  */
 $spec = array(
     array(
-        'app' => 'Tenant',
-        'regex' => '#^/api/tenant#',
-        'base' => $base,
-        'sub' => include 'Tenant/urls.php'
-    ),
-    array(
         'app' => 'Book',
         'regex' => '#^/api/wiki#',
         'base' => $base,
@@ -162,6 +156,26 @@ foreach ($spec as $moduleApi) {
         array_push($api, $moduleApi);
     }
 }
+
+/*
+ * To add tenant api (in super mode or basic mode)
+ */
+if (Config_Service::get('module.tenant.enable', FALSE)) {
+	array_push($api, array ( // Super Tenant
+		'app' => 'SuperTenant',
+		'regex' => '#^/api/saas#',
+		'base' => $base,
+		'sub' => include 'SuperTenant/urls.php'
+	));
+} else {
+	array_push($api, array ( // Tenant
+		'app' => 'Tenant',
+		'regex' => '#^/api/saas#',
+		'base' => $base,
+		'sub' => include 'Tenant/urls.php'
+	));
+}
+
 
 array_push($api, array(
     'app' => 'Spa',

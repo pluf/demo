@@ -17,3 +17,4 @@ storage/tenant
 
 # GNOME
 /wget-log
+/.composer.json.swp
