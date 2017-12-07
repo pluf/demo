@@ -46,7 +46,7 @@ return array(
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         'Captcha_Middleware_Verifier', // Must be affter session and tenant
-        'Seo_Middleware_Render',
+        //'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'Pluf_Middleware_UserSpace', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
