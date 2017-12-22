@@ -77,12 +77,12 @@ $api = array(
  * Special apis
  */
 $spec = array(
-    array(
-        'app' => 'Book',
-        'regex' => '#^/api/wiki#',
-        'base' => $base,
-        'sub' => include 'Book/urls.php'
-    ),
+//     array(
+//         'app' => 'Book',
+//         'regex' => '#^/api/wiki#',
+//         'base' => $base,
+//         'sub' => include 'Book/urls.php'
+//     ),
 //     array(
 //         'app' => 'SaaSDM',
 //         'regex' => '#^/api/dm#',
@@ -107,74 +107,74 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Bank/urls.php'
     ),
-    array( // Book
-        'app' => 'Book',
-        'regex' => '#^/api/book#',
-        'base' => $base,
-        'sub' => include 'Book/urls.php'
-    ),
-    array( // Calender
-        'app' => 'Calendar',
-        'regex' => '#^/api/calendar#',
-        'base' => $base,
-        'sub' => include 'Calendar/urls.php'
-    ),
-    array( // Backup
-        'app' => 'Backup',
-        'regex' => '#^/api/backup#',
-        'base' => $base,
-        'sub' => include 'Backup/urls.php'
-    ),
+//     array( // Book
+//         'app' => 'Book',
+//         'regex' => '#^/api/book#',
+//         'base' => $base,
+//         'sub' => include 'Book/urls.php'
+//     ),
+//     array( // Calender
+//         'app' => 'Calendar',
+//         'regex' => '#^/api/calendar#',
+//         'base' => $base,
+//         'sub' => include 'Calendar/urls.php'
+//     ),
+//     array( // Backup
+//         'app' => 'Backup',
+//         'regex' => '#^/api/backup#',
+//         'base' => $base,
+//         'sub' => include 'Backup/urls.php'
+//     ),
     array(
         'app' => 'Collection',
         'regex' => '#^/api/collection#',
         'base' => $base,
         'sub' => include 'Collection/urls.php'
     ),
-    array(
-        'app' => 'Marketplace',
-        'regex' => '#^/api/marketplace#',
-        'base' => $base,
-        'sub' => include 'Marketplace/urls.php'
-    ),
+//     array(
+//         'app' => 'Marketplace',
+//         'regex' => '#^/api/marketplace#',
+//         'base' => $base,
+//         'sub' => include 'Marketplace/urls.php'
+//     ),
     array( // Discount
         'app' => 'Discount',
         'regex' => '#^/api/discount#',
         'base' => $base,
         'sub' => include 'Discount/urls.php'
     ),
-    array ( // ELearn
-        'app' => 'ELearn',
-        'regex' => '#^/api/elearn#',
-        'base' => $base,
-        'sub' => include 'ELearn/urls.php'
-    ),
+//     array ( // ELearn
+//         'app' => 'ELearn',
+//         'regex' => '#^/api/elearn#',
+//         'base' => $base,
+//         'sub' => include 'ELearn/urls.php'
+//     ),
 );
 
-foreach ($spec as $moduleApi) {
-    if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
-        array_push($api, $moduleApi);
-    }
-}
+// foreach ($spec as $moduleApi) {
+//     if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
+//         array_push($api, $moduleApi);
+//     }
+// }
 
 /*
  * To add tenant api (in super mode or basic mode)
  */
-if (Config_Service::get('module.tenant.enable', FALSE)) {
-	array_push($api, array ( // Super Tenant
-		'app' => 'SuperTenant',
-		'regex' => '#^/api/saas#',
-		'base' => $base,
-		'sub' => include 'SuperTenant/urls.php'
-	));
-} else {
-	array_push($api, array ( // Tenant
-		'app' => 'Tenant',
-		'regex' => '#^/api/saas#',
-		'base' => $base,
-		'sub' => include 'Tenant/urls.php'
-	));
-}
+// if (Config_Service::get('module.SuperTenant.enable', FALSE)) {
+// 	array_push($api, array ( // Super Tenant
+// 		'app' => 'SuperTenant',
+// 		'regex' => '#^/api/saas#',
+// 		'base' => $base,
+// 		'sub' => include 'SuperTenant/urls.php'
+// 	));
+// } else {
+// 	array_push($api, array ( // Tenant
+// 		'app' => 'Tenant',
+// 		'regex' => '#^/api/saas#',
+// 		'base' => $base,
+// 		'sub' => include 'Tenant/urls.php'
+// 	));
+// }
 
 
 array_push($api, array(
