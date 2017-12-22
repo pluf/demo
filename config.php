@@ -10,13 +10,13 @@ return array(
     
     'installed_apps' => array(
         'Pluf',
-        'Monitor',
         'User',
         'Group',
         'Role',
         'Message',
-//         'Tenant',
-//         'SuperTenant',
+        'Monitor',
+        'Tenant',
+        'SuperTenant',
         'CMS',
         'Config',
         'Setting',
