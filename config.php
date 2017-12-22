@@ -1,89 +1,87 @@
 <?php
-
 // TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
-Pluf::loadFunction('Geo_DB_PointToDB');
+// Pluf::loadFunction('Geo_DB_PointToDB');
+
 return array(
     'general_domain' => 'pluf.ir',
     'general_admin_email' => array(
         'info@pluf.ir'
     ),
-    'general_from_email' => 'info@pluf.ir',
-    'general_new_request_mail_title' => 'Pluf Request',
+    
     'installed_apps' => array(
         'Pluf',
+        'Monitor',
         'User',
         'Group',
         'Role',
-        'Tenant',
-        'SuperTenant',
+        'Message',
+//         'Tenant',
+//         'SuperTenant',
         'CMS',
-        'Bank',
         'Config',
         'Setting',
+        'Bank',
         'Spa',
-        'Calendar',
-        'Monitor',
-        'SDP',
-        'Message',
-        'Book',
-        'Backup',
-        'Seo',
         'Collection',
+        'Seo',
         'Assort',
         'RestLog',
-        'Marketplace',
-        'Discount',
-        'ELearn',
-        'Captcha'
+        'Discount'
+        
+//         'SDP',
+//         'Calendar',
+//         'Book',
+//         'Backup',
+//         'Marketplace',
+//         'Discount',
+//         'ELearn',
+//         'Captcha'
     ),
     'middleware_classes' => array(
         'Pluf_Middleware_Session',
-        'Pluf_Middleware_BasicAuth',
+        'User_Middleware_BasicAuth',
+        'User_Middleware_Session',
         'Pluf_Middleware_Translation',
         'Pluf_Middleware_TenantEmpty',
         'Pluf_Middleware_TenantFromHeader',
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
-        'Captcha_Middleware_Verifier', // Must be affter session and tenant
+//         'Captcha_Middleware_Verifier', // Must be affter session and tenant
         //'Seo_Middleware_Render',
-        'Cache_Middleware_RFC7234',
-        'Pluf_Middleware_UserSpace', // It should be one of lastest middlewares
-        'RestLog_Middleware_Audit'
+//         'Cache_Middleware_RFC7234',
+        'User_Middleware_Space', // It should be one of lastest middlewares
+//         'RestLog_Middleware_Audit'
     ),
     'debug' => true,
     
-    'mimetypes_db' => SRC_BASE . '/etc/mime.types',
+    'mimetypes_db' =>  __DIR__ . '/storage/etc/mime.types',
     'languages' => array(
         'fa',
         'en'
     ),
-    'tmp_folder' => SRC_BASE . '/var/tmp',
+    'tmp_folder' =>  __DIR__ . '/storage/var/tmp',
     'template_folders' => array(
-        SRC_BASE . '/templates',
-        dirname(__FILE__) . '/vendor/pluf/seo/src/Seo/templates'
+        __DIR__ . '/storage/templates',
+        __DIR__ . '/vendor/pluf/seo/src/Seo/templates'
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
         'cfg' => 'Pluf_Template_Tag_Cfg'
     ),
-    'upload_path' => SRC_BASE . '/tenant',
+    'upload_path' =>  __DIR__ . '/storage/tenant',
     'upload_max_size' => 52428800,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
     
     'secret_key' => '5a8d7e0f2aad8bdab8f6eef725412850',
     'user_signup_active' => true,
-    'user_avatar_default' => SRC_BASE . '/var/avatar.svg',
+    'user_avatar_default' =>  __DIR__ . '/storage/var/avatar.svg',
     'user_avatra_max_size' => 2097152,
-    'auth_backends' => array(
-        'Pluf_Auth_ModelBackend'
-    ),
-    'pluf_use_rowpermission' => true,
     'log_delayed' => true,
     'log_handler' => 'Pluf_Log_File',
     'log_level' => Pluf_Log::ERROR,
-    'pluf_log_file' => SRC_BASE . '/var/logs/pluf.log',
+    'pluf_log_file' => __DIR__ . '/storage/var/logs/pluf.log',
     
     'db_engine' => 'MySQL',
     
