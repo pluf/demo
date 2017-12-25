@@ -10,13 +10,13 @@ return array(
     
     'installed_apps' => array(
         'Pluf',
-        'Monitor',
         'User',
         'Group',
         'Role',
         'Message',
-//         'Tenant',
-//         'SuperTenant',
+        'Monitor',
+        'Tenant',
+        'SuperTenant',
         'CMS',
         'Config',
         'Setting',
@@ -38,15 +38,17 @@ return array(
 //         'Captcha'
     ),
     'middleware_classes' => array(
-        'Pluf_Middleware_Session',
-        'User_Middleware_BasicAuth',
-        'User_Middleware_Session',
-        'Pluf_Middleware_Translation',
+        // find tenant
         'Pluf_Middleware_TenantEmpty',
         'Pluf_Middleware_TenantFromHeader',
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
+        // Load user and session
+        'Pluf_Middleware_Session',
+        'User_Middleware_BasicAuth',
+        'User_Middleware_Session',
+        'Pluf_Middleware_Translation',
 //         'Captcha_Middleware_Verifier', // Must be affter session and tenant
         //'Seo_Middleware_Render',
 //         'Cache_Middleware_RFC7234',
