@@ -32,7 +32,6 @@
 		"pluf/restlog" : "^3.0.0",
 		"pluf/discount" : "^3.0.0",
 		"pluf/backup" : "^3.0.0",
-		"pluf/config" : "^3.0.0",
 		"pluf/setting" : "^3.0.0",
 		"pluf/tenant" : "^3.0.0",
 		"pluf/supertenant" : "^3.0.0"

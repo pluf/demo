@@ -95,12 +95,12 @@ $spec = array(
         'base' => $base,
         'sub' => include 'SDP/urls.php'
     ),
-    array( // Tenant configuration
-        'app' => 'Config',
-        'regex' => '#^/api/config#',
-        'base' => $base,
-        'sub' => include 'Config/urls.php'
-    ),
+//     array( // Tenant configuration
+//         'app' => 'Config',
+//         'regex' => '#^/api/config#',
+//         'base' => $base,
+//         'sub' => include 'Config/urls.php'
+//     ),
     array( // Bank
         'app' => 'Bank',
         'regex' => '#^/api/bank#',
@@ -151,30 +151,30 @@ $spec = array(
 //     ),
 );
 
-// foreach ($spec as $moduleApi) {
-//     if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
-//         array_push($api, $moduleApi);
-//     }
-// }
+foreach ($spec as $moduleApi) {
+    if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', true)) {
+        array_push($api, $moduleApi);
+    }
+}
 
 /*
  * To add tenant api (in super mode or basic mode)
  */
-// if (Config_Service::get('module.SuperTenant.enable', FALSE)) {
-// 	array_push($api, array ( // Super Tenant
-// 		'app' => 'SuperTenant',
-// 		'regex' => '#^/api/saas#',
-// 		'base' => $base,
-// 		'sub' => include 'SuperTenant/urls.php'
-// 	));
-// } else {
-// 	array_push($api, array ( // Tenant
-// 		'app' => 'Tenant',
-// 		'regex' => '#^/api/saas#',
-// 		'base' => $base,
-// 		'sub' => include 'Tenant/urls.php'
-// 	));
-// }
+if (Config_Service::get('module.SuperTenant.enable', FALSE)) {
+	array_push($api, array ( // Super Tenant
+		'app' => 'SuperTenant',
+		'regex' => '#^/api/saas#',
+		'base' => $base,
+		'sub' => include 'SuperTenant/urls.php'
+	));
+} else {
+	array_push($api, array ( // Tenant
+		'app' => 'Tenant',
+		'regex' => '#^/api/saas#',
+		'base' => $base,
+		'sub' => include 'Tenant/urls.php'
+	));
+}
 
 
 array_push($api, array(
