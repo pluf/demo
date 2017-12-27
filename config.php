@@ -26,9 +26,8 @@ return array(
         'Seo',
         'Assort',
         'RestLog',
-        'Discount'
-        
-//         'SDP',
+        'Discount',
+        'SDP'
 //         'Calendar',
 //         'Book',
 //         'Backup',
