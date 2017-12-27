@@ -32,7 +32,6 @@ return array(
 //         'Book',
 //         'Backup',
 //         'Marketplace',
-//         'Discount',
 //         'ELearn',
 //         'Captcha'
     ),
