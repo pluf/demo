@@ -152,7 +152,7 @@ $spec = array(
 );
 
 foreach ($spec as $moduleApi) {
-    if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', true)) {
+    if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
         array_push($api, $moduleApi);
     }
 }
