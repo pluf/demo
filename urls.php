@@ -152,7 +152,7 @@ $spec = array(
 );
 
 foreach ($spec as $moduleApi) {
-    if (Config_Service::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
+    if (SuperTenant_ConfigService::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
         array_push($api, $moduleApi);
     }
 }
@@ -160,7 +160,7 @@ foreach ($spec as $moduleApi) {
 /*
  * To add tenant api (in super mode or basic mode)
  */
-if (Config_Service::get('module.SuperTenant.enable', FALSE)) {
+if (SuperTenant_ConfigService::get('module.SuperTenant.enable', FALSE)) {
 	array_push($api, array ( // Super Tenant
 		'app' => 'SuperTenant',
 		'regex' => '#^/api/saas#',
