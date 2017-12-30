@@ -96,6 +96,7 @@ return array(
     'user_profile_class' => 'User_Profile',
     
     'tenant_default' => 'www',
+//     'tenant_default' => 'test',
     'multitenant' => true,
     'bank_debug' => false,
     'migrate_allow_web' => true,
