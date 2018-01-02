@@ -66,7 +66,9 @@ return array(
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
-        'cfg' => 'Pluf_Template_Tag_Cfg'
+        'cfg' => 'Pluf_Template_Tag_Cfg',
+        'tenant' => 'Pluf_Template_Tag_Tenant',
+        'setting' => 'Setting_Template_Tag_Setting'
     ),
     'upload_path' =>  __DIR__ . '/storage/tenant',
     'upload_max_size' => 52428800,
@@ -96,6 +98,7 @@ return array(
     'user_profile_class' => 'User_Profile',
     
     'tenant_default' => 'www',
+//     'tenant_default' => 'test',
     'multitenant' => true,
     'bank_debug' => false,
     'migrate_allow_web' => true,
