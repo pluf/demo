@@ -71,7 +71,7 @@ return array(
         'setting' => 'Setting_Template_Tag_Setting'
     ),
     'upload_path' =>  __DIR__ . '/storage/tenant',
-    'upload_max_size' => 52428800,
+    'upload_max_size' => 524288000,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
     

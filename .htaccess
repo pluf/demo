@@ -30,3 +30,12 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 		Header append Vary User-Agent env=!dont-vary
 	</IfModule>
 </IfModule>
+
+<IfModule mod_php5.c>
+   php_value upload_max_filesize 50M
+   php_value post_max_size 50M
+</IfModule>
+<IfModule mod_php7.c>
+   php_value upload_max_filesize 50M
+   php_value post_max_size 50M
+</IfModule>
