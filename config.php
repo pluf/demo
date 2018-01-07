@@ -18,7 +18,6 @@ return array(
         'Tenant',
         'SuperTenant',
         'CMS',
-        'Setting',
         'Bank',
         'Spa',
         'Collection',
