@@ -37,7 +37,7 @@ return array(
     'middleware_classes' => array(
         // find tenant
         'Pluf_Middleware_TenantEmpty',
-        'Pluf_Middleware_TenantFromHeader',
+        'Pluf_Middleware_TenantFromHeader',// It is only for development and test phases
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
