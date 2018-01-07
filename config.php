@@ -18,7 +18,6 @@ return array(
         'Tenant',
         'SuperTenant',
         'CMS',
-        'Setting',
         'Bank',
         'Spa',
         'Collection',
@@ -37,7 +36,7 @@ return array(
     'middleware_classes' => array(
         // find tenant
         'Pluf_Middleware_TenantEmpty',
-        'Pluf_Middleware_TenantFromHeader',
+        'Pluf_Middleware_TenantFromHeader',// It is only for development and test phases
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
@@ -66,10 +65,12 @@ return array(
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
-        'cfg' => 'Pluf_Template_Tag_Cfg'
+        'cfg' => 'Pluf_Template_Tag_Cfg',
+        'tenant' => 'Pluf_Template_Tag_Tenant',
+        'setting' => 'Setting_Template_Tag_Setting'
     ),
     'upload_path' =>  __DIR__ . '/storage/tenant',
-    'upload_max_size' => 52428800,
+    'upload_max_size' => 524288000,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
     
@@ -96,6 +97,7 @@ return array(
     'user_profile_class' => 'User_Profile',
     
     'tenant_default' => 'www',
+//     'tenant_default' => 'test',
     'multitenant' => true,
     'bank_debug' => false,
     'migrate_allow_web' => true,
