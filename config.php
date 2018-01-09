@@ -25,13 +25,13 @@ return array(
         'Assort',
         'RestLog',
         'Discount',
-        'SDP'
+        'SDP',
 //         'Calendar',
 //         'Book',
 //         'Backup',
 //         'Marketplace',
 //         'ELearn',
-//         'Captcha'
+        'Captcha',
     ),
     'middleware_classes' => array(
         // find tenant
