@@ -33,6 +33,7 @@ return array(
 //         'ELearn',
         'Captcha',
     ),
+    'spas'=> array('my-home'),
     'middleware_classes' => array(
         // find tenant
         'Pluf_Middleware_TenantEmpty',
