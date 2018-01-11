@@ -25,14 +25,15 @@ return array(
         'Assort',
         'RestLog',
         'Discount',
-        'SDP'
+        'SDP',
 //         'Calendar',
 //         'Book',
 //         'Backup',
 //         'Marketplace',
 //         'ELearn',
-//         'Captcha'
+        'Captcha',
     ),
+    'spas'=> array('my-home'),
     'middleware_classes' => array(
         // find tenant
         'Pluf_Middleware_TenantEmpty',
@@ -45,9 +46,9 @@ return array(
         'User_Middleware_BasicAuth',
         'User_Middleware_Session',
         'Pluf_Middleware_Translation',
-//         'Captcha_Middleware_Verifier', // Must be affter session and tenant
-        //'Seo_Middleware_Render',
-//         'Cache_Middleware_RFC7234',
+        'Captcha_Middleware_Verifier', // Must be affter session and tenant
+        'Seo_Middleware_Render',
+        'Cache_Middleware_RFC7234',
         'User_Middleware_Space', // It should be one of lastest middlewares
 //         'RestLog_Middleware_Audit'
     ),

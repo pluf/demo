@@ -20,6 +20,7 @@
 	"require" : {
 		"pluf/spa" : "^3.0.0",
 		"pluf/cache" : "^3.0.0",
+		"pluf/captcha" : "^3.0.0",
 		"pluf/cms" : "^3.0.0",
 		"pluf/sdp" : "^3.0.0",
 		"pluf/core" : "^3.0.0",
@@ -32,7 +33,6 @@
 		"pluf/restlog" : "^3.0.0",
 		"pluf/discount" : "^3.0.0",
 		"pluf/backup" : "^3.0.0",
-		"pluf/setting" : "^3.0.0",
 		"pluf/tenant" : "^3.0.0",
 		"pluf/supertenant" : "^3.0.0"
 	},
