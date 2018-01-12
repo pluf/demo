@@ -26,12 +26,12 @@ return array(
         'RestLog',
         'Discount',
         'SDP',
+        'Backup',
+        'Captcha'
 //         'Calendar',
 //         'Book',
-//         'Backup',
 //         'Marketplace',
 //         'ELearn',
-        'Captcha',
     ),
     'spas'=> array('my-home'),
     'middleware_classes' => array(
@@ -68,7 +68,7 @@ return array(
         'now' => 'Pluf_Template_Tag_Now',
         'cfg' => 'Pluf_Template_Tag_Cfg',
         'tenant' => 'Pluf_Template_Tag_Tenant',
-        'setting' => 'Setting_Template_Tag_Setting'
+        'setting' => 'Tenant_Template_Tag_Setting'
     ),
     'upload_path' =>  __DIR__ . '/storage/tenant',
     'upload_max_size' => 524288000,
