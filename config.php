@@ -27,11 +27,13 @@ return array(
         'Discount',
         'SDP',
         'Backup',
-        'Captcha'
+        'Captcha',
 //         'Calendar',
 //         'Book',
 //         'Marketplace',
-//         'ELearn',
+        'ELearn',
+        'Shop',
+        'Mall'
     ),
     'spas'=> array('my-home'),
     'middleware_classes' => array(

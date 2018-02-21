@@ -143,12 +143,24 @@ $spec = array(
         'base' => $base,
         'sub' => include 'Discount/urls.php'
     ),
-//     array ( // ELearn
-//         'app' => 'ELearn',
-//         'regex' => '#^/api/elearn#',
-//         'base' => $base,
-//         'sub' => include 'ELearn/urls.php'
-//     ),
+    array ( // ELearn
+        'app' => 'ELearn',
+        'regex' => '#^/api/elearn#',
+        'base' => $base,
+        'sub' => include 'ELearn/urls.php'
+    ),
+    array ( // Shop
+        'app' => 'Shop',
+        'regex' => '#^/api/shop#',
+        'base' => $base,
+        'sub' => include 'Shop/urls.php'
+    ),
+    array ( // Mall
+        'app' => 'Mall',
+        'regex' => '#^/api/mall#',
+        'base' => $base,
+        'sub' => include 'Mall/urls.php'
+    ),
 );
 
 foreach ($spec as $moduleApi) {
