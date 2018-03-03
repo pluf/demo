@@ -39,7 +39,8 @@
 		"pluf/workflow" : "^3.0.0",
 		"pluf/elearn" : "^3.0.0",
 		"pluf/shop": "^3.0",
-		"pluf/mall": "^3.0"
+		"pluf/mall": "^3.0",
+		"pluf/monitor": "^3.0"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
