@@ -53,16 +53,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.2",
+            "version": "6.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90"
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
-                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
                 "shasum": ""
             },
             "require": {
@@ -72,7 +72,7 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
                 "psr/log": "^1.0"
             },
             "suggest": {
@@ -114,7 +114,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-03-26T16:33:04+00:00"
+            "time": "2018-04-22T15:46:56+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -280,6 +280,55 @@
                 "php crawler detect"
             ],
             "time": "2018-03-27T18:25:43+00:00"
+        },
+        {
+            "name": "paypal/rest-api-sdk-php",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paypal/PayPal-PHP-SDK.git",
+                "reference": "192e217beed14c8e75624e821fdc8ec51e2a21f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paypal/PayPal-PHP-SDK/zipball/192e217beed14c8e75624e821fdc8ec51e2a21f5",
+                "reference": "192e217beed14c8e75624e821fdc8ec51e2a21f5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3.0",
+                "psr/log": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PayPal": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "PayPal",
+                    "homepage": "https://github.com/paypal/rest-api-sdk-php/contributors"
+                }
+            ],
+            "description": "PayPal's PHP SDK for REST APIs",
+            "homepage": "http://paypal.github.io/PayPal-PHP-SDK/",
+            "keywords": [
+                "payments",
+                "paypal",
+                "rest",
+                "sdk"
+            ],
+            "time": "2017-11-13T19:21:59+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -824,7 +873,7 @@
         },
         {
             "name": "pluf/assort",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/assort.git",
@@ -879,7 +928,7 @@
         },
         {
             "name": "pluf/backup",
-            "version": "3.0.8",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/backup.git",
@@ -932,19 +981,20 @@
         },
         {
             "name": "pluf/bank",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/bank.git",
-                "reference": "5e91db09a9fbac89e1378ff3305cf7036ad2d2b4"
+                "reference": "46a7ce2348b14449a7fbf9e033d3f5a178d03b2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/bank/zipball/5e91db09a9fbac89e1378ff3305cf7036ad2d2b4",
-                "reference": "5e91db09a9fbac89e1378ff3305cf7036ad2d2b4",
+                "url": "https://api.github.com/repos/pluf/bank/zipball/46a7ce2348b14449a7fbf9e033d3f5a178d03b2f",
+                "reference": "46a7ce2348b14449a7fbf9e033d3f5a178d03b2f",
                 "shasum": ""
             },
             "require": {
+                "paypal/rest-api-sdk-php": "^1.13",
                 "pluf/core": "^3.0.0",
                 "pluf/user": "^3.0.0",
                 "zarinpal/zarinpal": "^1.1.0"
@@ -986,11 +1036,11 @@
                 "pluf",
                 "pluf-module"
             ],
-            "time": "2018-01-24T21:50:42+00:00"
+            "time": "2018-05-18T08:28:57+00:00"
         },
         {
             "name": "pluf/cache",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/cache.git",
@@ -1041,16 +1091,16 @@
         },
         {
             "name": "pluf/captcha",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/captcha.git",
-                "reference": "0bff4ee30796fed58838565acc035f1c6ea31d26"
+                "reference": "1817c07855fb275664f49d5568e94a0940f399fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/captcha/zipball/0bff4ee30796fed58838565acc035f1c6ea31d26",
-                "reference": "0bff4ee30796fed58838565acc035f1c6ea31d26",
+                "url": "https://api.github.com/repos/pluf/captcha/zipball/1817c07855fb275664f49d5568e94a0940f399fe",
+                "reference": "1817c07855fb275664f49d5568e94a0940f399fe",
                 "shasum": ""
             },
             "require": {
@@ -1090,20 +1140,20 @@
                 "pluf",
                 "pluf-module"
             ],
-            "time": "2018-01-19T00:09:30+00:00"
+            "time": "2018-05-17T06:41:23+00:00"
         },
         {
             "name": "pluf/cms",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/cms.git",
-                "reference": "ffcd2519106e1c7fd0aa6701c44af200cbf6f6ea"
+                "reference": "7c17db13f3046aba591ea8b8d8d7d26cc832e0f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/cms/zipball/ffcd2519106e1c7fd0aa6701c44af200cbf6f6ea",
-                "reference": "ffcd2519106e1c7fd0aa6701c44af200cbf6f6ea",
+                "url": "https://api.github.com/repos/pluf/cms/zipball/7c17db13f3046aba591ea8b8d8d7d26cc832e0f5",
+                "reference": "7c17db13f3046aba591ea8b8d8d7d26cc832e0f5",
                 "shasum": ""
             },
             "require": {
@@ -1143,11 +1193,11 @@
                 "pluf",
                 "pluf-module"
             ],
-            "time": "2018-01-07T19:33:23+00:00"
+            "time": "2018-05-18T11:05:05+00:00"
         },
         {
             "name": "pluf/collection",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/collection.git",
@@ -1203,16 +1253,16 @@
         },
         {
             "name": "pluf/core",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/core.git",
-                "reference": "eb97c04d484990f73e0ceba3cc41951c7ae17134"
+                "reference": "9cae70616762c15395fe68be1386bf3fbe91f9a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/core/zipball/eb97c04d484990f73e0ceba3cc41951c7ae17134",
-                "reference": "eb97c04d484990f73e0ceba3cc41951c7ae17134",
+                "url": "https://api.github.com/repos/pluf/core/zipball/9cae70616762c15395fe68be1386bf3fbe91f9a2",
+                "reference": "9cae70616762c15395fe68be1386bf3fbe91f9a2",
                 "shasum": ""
             },
             "require": {
@@ -1263,11 +1313,11 @@
                 "pluf-module",
                 "restfull"
             ],
-            "time": "2018-03-03T17:19:21+00:00"
+            "time": "2018-05-18T09:59:03+00:00"
         },
         {
             "name": "pluf/discount",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/discount.git",
@@ -1320,16 +1370,16 @@
         },
         {
             "name": "pluf/elearn",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/elearn.git",
-                "reference": "68ba3b180d13351800b6a25ed8d913270a40d7ed"
+                "reference": "5bedb5b4081deede96749e91c92049d6c60b1b99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/elearn/zipball/68ba3b180d13351800b6a25ed8d913270a40d7ed",
-                "reference": "68ba3b180d13351800b6a25ed8d913270a40d7ed",
+                "url": "https://api.github.com/repos/pluf/elearn/zipball/5bedb5b4081deede96749e91c92049d6c60b1b99",
+                "reference": "5bedb5b4081deede96749e91c92049d6c60b1b99",
                 "shasum": ""
             },
             "require": {
@@ -1373,7 +1423,7 @@
                 "pluf",
                 "pluf-module"
             ],
-            "time": "2018-01-29T22:24:26+00:00"
+            "time": "2018-05-18T11:04:07+00:00"
         },
         {
             "name": "pluf/geo",
@@ -1431,16 +1481,16 @@
         },
         {
             "name": "pluf/http2",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/http2.git",
-                "reference": "5da74fc6a651ba7de162bc9600e673c8fb5404b0"
+                "reference": "3240a0ec58e4007d8f7c2289671308117c57ddfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/http2/zipball/5da74fc6a651ba7de162bc9600e673c8fb5404b0",
-                "reference": "5da74fc6a651ba7de162bc9600e673c8fb5404b0",
+                "url": "https://api.github.com/repos/pluf/http2/zipball/3240a0ec58e4007d8f7c2289671308117c57ddfc",
+                "reference": "3240a0ec58e4007d8f7c2289671308117c57ddfc",
                 "shasum": ""
             },
             "require": {
@@ -1495,11 +1545,11 @@
                 }
             ],
             "description": "Pluf HTTP package",
-            "time": "2017-12-27T22:24:21+00:00"
+            "time": "2018-05-17T05:45:50+00:00"
         },
         {
             "name": "pluf/mall",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/mall.git",
@@ -1621,7 +1671,7 @@
         },
         {
             "name": "pluf/restlog",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/restlog.git",
@@ -1675,7 +1725,7 @@
         },
         {
             "name": "pluf/sdp",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/sdp.git",
@@ -1735,16 +1785,16 @@
         },
         {
             "name": "pluf/seo",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/seo.git",
-                "reference": "6cc5b25b7ec0bc12ee156592d7760a6257fd9ccd"
+                "reference": "fb6e1ce156a04b4288a214f5a62ad639ba6db6f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/seo/zipball/6cc5b25b7ec0bc12ee156592d7760a6257fd9ccd",
-                "reference": "6cc5b25b7ec0bc12ee156592d7760a6257fd9ccd",
+                "url": "https://api.github.com/repos/pluf/seo/zipball/fb6e1ce156a04b4288a214f5a62ad639ba6db6f9",
+                "reference": "fb6e1ce156a04b4288a214f5a62ad639ba6db6f9",
                 "shasum": ""
             },
             "require": {
@@ -1788,20 +1838,20 @@
                 "pluf-module",
                 "restfull"
             ],
-            "time": "2017-12-27T22:24:40+00:00"
+            "time": "2018-05-18T10:57:21+00:00"
         },
         {
             "name": "pluf/shop",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/shop.git",
-                "reference": "c3c44bdbb045c15ed124db0764c28f915b4060e3"
+                "reference": "ab3a06848bac9efdb439c6c73a01dc9a8b5d34a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/shop/zipball/c3c44bdbb045c15ed124db0764c28f915b4060e3",
-                "reference": "c3c44bdbb045c15ed124db0764c28f915b4060e3",
+                "url": "https://api.github.com/repos/pluf/shop/zipball/ab3a06848bac9efdb439c6c73a01dc9a8b5d34a3",
+                "reference": "ab3a06848bac9efdb439c6c73a01dc9a8b5d34a3",
                 "shasum": ""
             },
             "require": {
@@ -1850,11 +1900,11 @@
                 "service",
                 "shop"
             ],
-            "time": "2018-02-22T13:09:46+00:00"
+            "time": "2018-04-04T11:06:04+00:00"
         },
         {
             "name": "pluf/spa",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/spa.git",
@@ -1908,16 +1958,16 @@
         },
         {
             "name": "pluf/supertenant",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/supertenant.git",
-                "reference": "0eaaa00f8609da62e6b68df4004b055b17991c86"
+                "reference": "5f5d62c1efa2939477552eec39679a806023aa72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/supertenant/zipball/0eaaa00f8609da62e6b68df4004b055b17991c86",
-                "reference": "0eaaa00f8609da62e6b68df4004b055b17991c86",
+                "url": "https://api.github.com/repos/pluf/supertenant/zipball/5f5d62c1efa2939477552eec39679a806023aa72",
+                "reference": "5f5d62c1efa2939477552eec39679a806023aa72",
                 "shasum": ""
             },
             "require": {
@@ -1956,20 +2006,20 @@
                 "pluf",
                 "pluf-module"
             ],
-            "time": "2018-01-16T18:49:53+00:00"
+            "time": "2018-05-11T14:44:54+00:00"
         },
         {
             "name": "pluf/tenant",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/tenant.git",
-                "reference": "cf416cec0017c65902430066575ff92b047ddbad"
+                "reference": "619d08d837b0da1ee7cd4da9a26cb7076c46046e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/tenant/zipball/cf416cec0017c65902430066575ff92b047ddbad",
-                "reference": "cf416cec0017c65902430066575ff92b047ddbad",
+                "url": "https://api.github.com/repos/pluf/tenant/zipball/619d08d837b0da1ee7cd4da9a26cb7076c46046e",
+                "reference": "619d08d837b0da1ee7cd4da9a26cb7076c46046e",
                 "shasum": ""
             },
             "require": {
@@ -2012,20 +2062,20 @@
                 "pluf-module",
                 "tenant"
             ],
-            "time": "2018-03-04T14:41:23+00:00"
+            "time": "2018-04-04T11:02:35+00:00"
         },
         {
             "name": "pluf/user",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/user.git",
-                "reference": "9e5cdb3e5efa339dbfc3d34f7f3f47f3cdff314a"
+                "reference": "92e584d55870d35ec1a4e74516784b148404d642"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/user/zipball/9e5cdb3e5efa339dbfc3d34f7f3f47f3cdff314a",
-                "reference": "9e5cdb3e5efa339dbfc3d34f7f3f47f3cdff314a",
+                "url": "https://api.github.com/repos/pluf/user/zipball/92e584d55870d35ec1a4e74516784b148404d642",
+                "reference": "92e584d55870d35ec1a4e74516784b148404d642",
                 "shasum": ""
             },
             "require": {
@@ -2065,20 +2115,20 @@
                 "profile",
                 "user"
             ],
-            "time": "2018-03-03T17:12:18+00:00"
+            "time": "2018-05-11T17:15:46+00:00"
         },
         {
             "name": "pluf/workflow",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pluf/workflow.git",
-                "reference": "7a9c72d037e594600da24b2bbe2a38be1a75ddfd"
+                "reference": "9d386d6d59da446c0bcbdda0b21dc8f2aedd7f1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pluf/workflow/zipball/7a9c72d037e594600da24b2bbe2a38be1a75ddfd",
-                "reference": "7a9c72d037e594600da24b2bbe2a38be1a75ddfd",
+                "url": "https://api.github.com/repos/pluf/workflow/zipball/9d386d6d59da446c0bcbdda0b21dc8f2aedd7f1e",
+                "reference": "9d386d6d59da446c0bcbdda0b21dc8f2aedd7f1e",
                 "shasum": ""
             },
             "require": {
@@ -2114,7 +2164,7 @@
                 "pluf",
                 "workflow"
             ],
-            "time": "2017-12-27T22:25:01+00:00"
+            "time": "2018-04-04T10:53:42+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2165,6 +2215,53 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "zarinpal/zarinpal",
