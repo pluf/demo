@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfc641ee0d9269ae19e35f3db2f5cfce",
+    "content-hash": "fd8a00dddba110f96137e945039ae40b",
     "packages": [
         {
             "name": "google/recaptcha",
@@ -1609,6 +1609,58 @@
                 "shop"
             ],
             "time": "2018-03-04T14:45:16+00:00"
+        },
+        {
+            "name": "pluf/marketplace",
+            "version": "3.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pluf/marketplace.git",
+                "reference": "66bdfbd59fa45d45f54c7d878e97629430e18a3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pluf/marketplace/zipball/66bdfbd59fa45d45f54c7d878e97629430e18a3b",
+                "reference": "66bdfbd59fa45d45f54c7d878e97629430e18a3b",
+                "shasum": ""
+            },
+            "require": {
+                "pluf/tenant": "^3.0.0",
+                "pluf/user": "^3.0.0"
+            },
+            "require-dev": {
+                "pluf/test": "^3.0.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "src/"
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mostafa Barmshory",
+                    "email": "mostafa.barmshory@dpq.co.ir",
+                    "homepage": "http://dpq.co.ir",
+                    "role": "developer"
+                },
+                {
+                    "name": "Mohammad Hadi Mansouri",
+                    "email": "mohammad.hadi.mansouri@dpq.co.ir",
+                    "homepage": "http://dpq.co.ir",
+                    "role": "developer"
+                }
+            ],
+            "description": "A module for Pluf to implement a marketplace for SPAs",
+            "homepage": "https://github.com/pluf/marketplace",
+            "keywords": [
+                "marketplace",
+                "pluf",
+                "pluf-module"
+            ],
+            "time": "2018-01-07T21:52:49+00:00"
         },
         {
             "name": "pluf/monitor",
