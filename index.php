@@ -8,13 +8,12 @@ Pluf::start ('config.php' );
  * 
  * Init DB and create new tenant.
  */ 
-ini_set('display_errors', 'on');
-error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
 // header('Content-Type: text/plain');
 // try {
 //     $m = new Pluf_Migration(Pluf::f('installed_apps'));
 //     $m->install();
-    
 //     $view = new SuperTenant_Views();
 //     $request = new Pluf_HTTP_Request('/');
 //     $request->tenant = new Pluf_Tenant(1);
@@ -31,3 +30,4 @@ error_reporting(E_ALL);
 // }
 
 Pluf_Dispatcher::dispatch ( Pluf_HTTP_URL::getAction (), 'urls.php');
+
