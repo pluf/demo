@@ -70,7 +70,34 @@ $api = array(
         'regex' => '#^/api/monitor#',
         'base' => $base,
         'sub' => include 'Monitor/urls.php'
-    )
+    ),
+    
+    // Note: Hadi, 1397-03-07: Modules are added as basic
+    
+    array(
+        'app' => 'SDP',
+        'regex' => '#^/api/sdp#',
+        'base' => $base,
+        'sub' => include 'SDP/urls.php'
+    ),
+    array( // Bank
+        'app' => 'Bank',
+        'regex' => '#^/api/bank#',
+        'base' => $base,
+        'sub' => include 'Bank/urls.php'
+    ),
+    array(
+        'app' => 'Collection',
+        'regex' => '#^/api/collection#',
+        'base' => $base,
+        'sub' => include 'Collection/urls.php'
+    ),
+    array( // Discount
+        'app' => 'Discount',
+        'regex' => '#^/api/discount#',
+        'base' => $base,
+        'sub' => include 'Discount/urls.php'
+    ),
 );
 
 /*
@@ -89,24 +116,14 @@ $spec = array(
 //         'base' => $base,
 //         'sub' => include 'SaaSDM/urls.php'
 //     ),
-    array(
-        'app' => 'SDP',
-        'regex' => '#^/api/sdp#',
-        'base' => $base,
-        'sub' => include 'SDP/urls.php'
-    ),
+
 //     array( // Tenant configuration
 //         'app' => 'Config',
 //         'regex' => '#^/api/config#',
 //         'base' => $base,
 //         'sub' => include 'Config/urls.php'
 //     ),
-    array( // Bank
-        'app' => 'Bank',
-        'regex' => '#^/api/bank#',
-        'base' => $base,
-        'sub' => include 'Bank/urls.php'
-    ),
+
 //     array( // Book
 //         'app' => 'Book',
 //         'regex' => '#^/api/book#',
@@ -125,24 +142,14 @@ $spec = array(
 //         'base' => $base,
 //         'sub' => include 'Backup/urls.php'
 //     ),
-    array(
-        'app' => 'Collection',
-        'regex' => '#^/api/collection#',
-        'base' => $base,
-        'sub' => include 'Collection/urls.php'
-    ),
+   
 //     array(
 //         'app' => 'Marketplace',
 //         'regex' => '#^/api/marketplace#',
 //         'base' => $base,
 //         'sub' => include 'Marketplace/urls.php'
 //     ),
-    array( // Discount
-        'app' => 'Discount',
-        'regex' => '#^/api/discount#',
-        'base' => $base,
-        'sub' => include 'Discount/urls.php'
-    ),
+   
     array ( // ELearn
         'app' => 'ELearn',
         'regex' => '#^/api/elearn#',
