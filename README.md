@@ -4,3 +4,8 @@
 
 Pluf demo is a simple pluf based projec to test a complete set of modules. This project amid to be
 a demo of total plugins and modules.
+
+**Usage**
+
+
+**Issues**
