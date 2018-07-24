@@ -47,12 +47,12 @@ $api = array(
         'base' => $base,
         'sub' => include 'Message/urls.php'
     ),
-    array( // NOTE: this will remove in next version
-        'app' => 'Tenant',
-        'regex' => '#^/api/setting#',
-        'base' => $base,
-        'sub' => include 'Tenant/urls-setting-legacy.php'
-    ),
+//     array( // NOTE: this will remove in next version
+//         'app' => 'Tenant',
+//         'regex' => '#^/api/setting#',
+//         'base' => $base,
+//         'sub' => include 'Tenant/urls-setting-legacy.php'
+//     ),
     array( // Seo
         'app' => 'Seo',
         'regex' => '#^/api/seo#',
