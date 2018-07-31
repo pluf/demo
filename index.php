@@ -8,8 +8,8 @@ Pluf::start ('config.php' );
  * 
  * Init DB and create new tenant.
  */ 
-// ini_set('display_errors', 'on');
-// error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+error_reporting(E_ALL);
 // header('Content-Type: text/plain');
 // try {
 //     $m = new Pluf_Migration(Pluf::f('installed_apps'));
