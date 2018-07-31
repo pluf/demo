@@ -6,9 +6,9 @@ The "Pluf demo project" is a simple, yet reference, pluf-based application to sh
 
 **Requirements**
 
-PHP 7.1.3 or higher;
+* PHP 7.1.3 or higher;
 
-PDO-SQLite PHP extension enabled;
+* PDO-SQLite PHP extension enabled;
 
 **Installation**
 
@@ -39,7 +39,7 @@ go to the extracted folder and run:
 
 In order to use Apache you must create a virtual host. *Virtual Host* refers to the practice of running more than one web site (such as company1.example.com and company2.example.com ) on a single machine. 
    
-Sample Virtual Host 
+Sample Virtual Host can be as follow:
 
 
     <VirtualHost *:port>
@@ -53,6 +53,8 @@ Sample Virtual Host
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 	</VirtualHost>
+
+Note that you must enable your virtual host with` a2ensite` command. Further reading can be found [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts).
 
 **Usage**
 
