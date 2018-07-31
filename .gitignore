@@ -18,3 +18,4 @@ storage/tenant
 # GNOME
 /wget-log
 /.composer.json.swp
+/composer.lock
