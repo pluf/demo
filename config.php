@@ -92,7 +92,7 @@ return array(
     
     'db_version' => '5.5.33',
     'db_login' => 'root',
-    'db_password' => 'root',
+    'db_password' => '',
     'db_server' => 'localhost',
     'db_database' => 'demo',
     'db_table_prefix' => '',
@@ -103,7 +103,7 @@ return array(
     
     'tenant_default' => 'www',
 //     'tenant_default' => 'test',
-//     'multitenant' => true,
+    'multitenant' => true,
     'bank_debug' => false,
     'migrate_allow_web' => true,
     
