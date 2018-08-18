@@ -19,7 +19,7 @@ return array(
         'SuperTenant',
 //         'Bank',
 //         'Backup',
-//         'CMS',
+        'CMS',
 //         'Collection',
 //         'Captcha',
 //         'Cache',
