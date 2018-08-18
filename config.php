@@ -17,27 +17,27 @@ return array(
         'Monitor',
         'Tenant',
         'SuperTenant',
-        'Bank',
-        'Backup',
-        'CMS',
-        'Collection',
-        'Captcha',
-        'Cache',
-        'Geo',
+//         'Bank',
+//         'Backup',
+//         'CMS',
+//         'Collection',
+//         'Captcha',
+//         'Cache',
+//         'Geo',
         'Spa',
-        'Seo',
-        'Assort',
-        'RestLog',
-        'Discount',
-        'SDP',
-//         'Calendar',
-//         'Book',
-        'Marketplace',
-        'ELearn',
-        'Shop',
-        'Mall'
+//         'Seo',
+//         'Assort',
+//         'RestLog',
+//         'Discount',
+//         'SDP',
+// //         'Calendar',
+// //         'Book',
+//         'Marketplace',
+//         'ELearn',
+//         'Shop',
+//         'Mall'
     ),
-    'spas'=> array('my-home'),
+    'spas'=> array(),
     'middleware_classes' => array(
         // find tenant
         'Pluf_Middleware_TenantEmpty',
@@ -51,10 +51,10 @@ return array(
         'User_Middleware_Session',
         'Pluf_Middleware_Translation',
         'Captcha_Middleware_Verifier', // Must be affter session and tenant
-        'Seo_Middleware_Render',
+//         'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'User_Middleware_Space', // It should be one of lastest middlewares
-        'RestLog_Middleware_Audit'
+//         'RestLog_Middleware_Audit'
     ),
     'debug' => true,
     
@@ -94,7 +94,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'demo',
+    'db_database' => 'demo4',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
