@@ -100,6 +100,17 @@ $api = array(
     ),
 );
 
+
+/*
+ * General APIs V2
+ */
+array_push($api, array (
+    'app' => 'User',
+    'regex' => '#^/api/v2/user#',
+    'base' => $base,
+    'sub' => include 'User/urls-v2.php'
+));
+
 /*
  * Special apis
  */
@@ -202,6 +213,8 @@ array_push($api, array(
     'base' => $base,
     'sub' => include 'Spa/urls-app2.php'
 ));
+
+
 return $api;
 
 
