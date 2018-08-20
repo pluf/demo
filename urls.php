@@ -106,6 +106,12 @@ $api_v2 = array(
         'regex' => '#^/api/v2/cms#',
         'base' => $base,
         'sub' => include 'CMS/urls-v2.php'
+    ),
+    array( // Tenant
+        'app' => 'Tenant',
+        'regex' => '#^/api/v2/tenant#',
+        'base' => $base,
+        'sub' => include 'Tenant/urls-v2.php'
     )
 );
 
