@@ -216,10 +216,10 @@ if (SuperTenant_ConfigService::get('module.SuperTenant.enable', FALSE)) {
 }
 
 array_push($api, array(
-    'app' => 'Spa',
+    'app' => 'Tenant',
     'regex' => '#^#',
     'base' => $base,
-    'sub' => include 'Spa/urls-app2.php'
+    'sub' => include 'Tenant/urls-app-v2.php'
 ));
 
 return $api;
