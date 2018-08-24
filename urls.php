@@ -88,6 +88,12 @@ $api_v2 = array(
         'regex' => '#^/api/v2/cms#',
         'base' => $base,
         'sub' => include 'CMS/urls-v2.php'
+    ),
+    array( // Monitors
+        'app' => 'Monitor',
+        'regex' => '#^/api/v2/monitor#',
+        'base' => $base,
+        'sub' => include 'Monitor/urls-v2.php'
     )
 );
 
