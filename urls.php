@@ -4,7 +4,7 @@ $base = '';
 /*
  * General apis
  */
-$api = array(
+$api_old = array(
     // array(
     // 'app' => 'User',
     // 'regex' => '#^/api/user#',
@@ -65,6 +65,12 @@ $api = array(
 );
 
 $api_v2 = array(
+    array( // Tenant
+        'app' => 'Tenant',
+        'regex' => '#^/api/v2/tenant#',
+        'base' => $base,
+        'sub' => include 'Tenant/urls-v2.php'
+    ),
     array(
         'app' => 'Group',
         'regex' => '#^/api/v2/user/groups#',
@@ -98,35 +104,28 @@ $api_v2 = array(
 );
 
 /*
- * General APIs V2
- */
-$api = array_merge($api, $api_v2);
-
-/*
  * To add tenant api (in super mode or basic mode)
  */
 if (SuperTenant_ConfigService::get('module.SuperTenant.enable', FALSE)) {
-    array_push($api, array( // Super Tenant
+    array_push($api_v2, array( // Super Tenant
         'app' => 'SuperTenant',
-        'regex' => '#^/api/saas#',
+        'regex' => '#^/api/v2/super-tenant#',
         'base' => $base,
-        'sub' => include 'SuperTenant/urls.php'
-    ));
-} else {
-    array_push($api, array( // Tenant
-        'app' => 'Tenant',
-        'regex' => '#^/api/v2/tenant#',
-        'base' => $base,
-        'sub' => include 'Tenant/urls-v2.php'
+        'sub' => include 'SuperTenant/urls-v2.php'
     ));
 }
 
-array_push($api, array(
+array_push($api_v2, array( // Loading SPAs
     'app' => 'Tenant',
     'regex' => '#^#',
     'base' => $base,
     'sub' => include 'Tenant/urls-app-v2.php'
 ));
+
+/*
+ * General APIs V2
+ */
+$api = array_merge($api_old, $api_v2);
 
 return $api;
 
