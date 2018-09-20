@@ -80,8 +80,7 @@ return array(
     'encoding' => 'UTF-8',
     
     'secret_key' => '5a8d7e0f2aad8bdab8f6eef725412850',
-    'user_signup_active' => true,
-    'account_force_activate' => false,
+    'user_account_auto_activate' => true,
     'user_avatar_default' =>  __DIR__ . '/storage/var/avatar.svg',
     'user_avatra_max_size' => 2097152,
     'log_delayed' => true,
