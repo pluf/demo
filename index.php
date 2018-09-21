@@ -25,14 +25,6 @@ error_reporting(E_ALL);
 //         'validate' => true
 //     );
 //     $view->create($request, array());
-
-//     $admin = User_Account::getUser('admin');
-//     $credit = new User_Credential();
-//     $credit->setFromFormData(array(
-//         'account_id' => $admin->id
-//     ));
-//     $credit->setPassword('admin');
-//     $credit->create();
 // } catch (Exception $e) {
 //     var_export($e);
 // }
