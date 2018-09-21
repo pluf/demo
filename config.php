@@ -27,7 +27,7 @@ return array(
 //         'Spa',
 //         'Seo',
 //         'Assort',
-//         'RestLog',
+        'RestLog',
 //         'Discount',
 //         'SDP',
 // //         'Calendar',
@@ -54,7 +54,7 @@ return array(
 //         'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'User_Middleware_Space', // It should be one of lastest middlewares
-//         'RestLog_Middleware_Audit'
+        'RestLog_Middleware_Audit'
     ),
     'debug' => true,
     
