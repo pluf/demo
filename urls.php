@@ -2,7 +2,7 @@
 $base = '';
 
 /*
- * General apis
+ * Old APIs
  */
 $api_old = array(
     // array(
@@ -64,6 +64,9 @@ $api_old = array(
     // )
 );
 
+/*
+ * Basic API-V2
+ */
 $api_v2 = array(
     array( // Tenant
         'app' => 'Tenant',
@@ -104,17 +107,32 @@ $api_v2 = array(
 );
 
 /*
- * To add tenant api (in super mode or basic mode)
+ * Optional API-V2
  */
-if (SuperTenant_ConfigService::get('module.SuperTenant.enable', FALSE)) {
-    array_push($api_v2, array( // Super Tenant
+$api_v2_optional = array(
+    array( // Marketplace
+        'app' => 'Marketplace',
+        'regex' => '#^/api/v2/marketplace#',
+        'base' => $base,
+        'sub' => include 'Marketplace/urls-v2.php'
+    ),
+    array( // Super Tenant
         'app' => 'SuperTenant',
         'regex' => '#^/api/v2/super-tenant#',
         'base' => $base,
         'sub' => include 'SuperTenant/urls-v2.php'
-    ));
+    )
+);
+
+foreach ($api_v2_optional as $moduleApi) {
+    if (SuperTenant_ConfigService::get('module.' . $moduleApi['app'] . '.enable', FALSE)) {
+        array_push($api_v2, $moduleApi);
+    }
 }
 
+/*
+ * API to load SPAs. It should be last API.
+ */
 array_push($api_v2, array( // Loading SPAs
     'app' => 'Tenant',
     'regex' => '#^#',
@@ -123,7 +141,7 @@ array_push($api_v2, array( // Loading SPAs
 ));
 
 /*
- * General APIs V2
+ * Merge old and new APIs.
  */
 $api = array_merge($api_old, $api_v2);
 

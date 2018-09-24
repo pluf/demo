@@ -32,7 +32,7 @@ return array(
 //         'SDP',
 // //         'Calendar',
 // //         'Book',
-//         'Marketplace',
+        'Marketplace',
 //         'ELearn',
 //         'Shop',
 //         'Mall'
