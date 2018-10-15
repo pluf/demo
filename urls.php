@@ -86,6 +86,12 @@ $api_v2 = array(
         'base' => $base,
         'sub' => include 'Role/urls-v2.php'
     ),
+    array(
+        'app' => 'Message',
+        'regex' => '#^/api/v2/user/messages#',
+        'base' => $base,
+        'sub' => include 'Message/urls-v2.php'
+    ),
     array( // User Management System
         'app' => 'User',
         'regex' => '#^/api/v2/user#',
