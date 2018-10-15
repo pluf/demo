@@ -109,6 +109,12 @@ $api_v2 = array(
         'regex' => '#^/api/v2/monitor#',
         'base' => $base,
         'sub' => include 'Monitor/urls-v2.php'
+    ),
+    array( // Seo
+        'app' => 'Seo',
+        'regex' => '#^/api/v2/seo#',
+        'base' => $base,
+        'sub' => include 'Seo/urls-v2.php'
     )
 );
 

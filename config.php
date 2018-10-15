@@ -25,7 +25,7 @@ return array(
 //         'Cache',
 //         'Geo',
 //         'Spa',
-//         'Seo',
+        'Seo',
 //         'Assort',
         'RestLog',
 //         'Discount',
