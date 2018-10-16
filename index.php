@@ -1,13 +1,13 @@
 <?php
 require 'vendor/autoload.php';
 require 'Pluf.php';
-Pluf::start ('config.php' );
+Pluf::start('config.php');
 
 /*
  * Uncomment to install
- * 
+ *
  * Init DB and create new tenant.
- */ 
+ */
 ini_set('display_errors', 'on');
 error_reporting(E_ALL);
 // header('Content-Type: text/plain');
@@ -29,5 +29,5 @@ error_reporting(E_ALL);
 //     var_export($e);
 // }
 
-Pluf_Dispatcher::dispatch ( Pluf_HTTP_URL::getAction (), 'urls.php');
+Pluf_Dispatcher::dispatch(Pluf_HTTP_URL::getAction(), 'urls.php');
 
