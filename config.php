@@ -17,7 +17,7 @@ return array(
         'Monitor',
         'Tenant',
         'SuperTenant',
-//         'Bank',
+        'Bank',
 //         'Backup',
         'CMS',
 //         'Collection',
@@ -34,7 +34,7 @@ return array(
 // //         'Book',
         'Marketplace',
 //         'ELearn',
-//         'Shop',
+        'Shop',
 //         'Mall'
     ),
     'spas'=> array(),

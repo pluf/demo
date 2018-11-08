@@ -115,6 +115,18 @@ $api_v2 = array(
         'regex' => '#^/api/v2/seo#',
         'base' => $base,
         'sub' => include 'Seo/urls-v2.php'
+    ),
+    array( // Bank
+        'app' => 'Bank',
+        'regex' => '#^/api/v2/bank#',
+        'base' => $base,
+        'sub' => include 'Bank/urls.php'
+    ),
+    array( // Shop
+        'app' => 'Shop',
+        'regex' => '#^/api/v2/shop#',
+        'base' => $base,
+        'sub' => include 'Shop/urls.php'
     )
 );
 
