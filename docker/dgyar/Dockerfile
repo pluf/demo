@@ -35,9 +35,10 @@ RUN docker-php-ext-enable mysqli
 #RUN docker-php-ext-install SimpleXML 
 
 # Support ZIP
-#RUN apt-get install --no-install-recommends -y zip unzip
-#RUN docker-php-ext-install zip 
+RUN apt-get install --no-install-recommends -y zlib1g-dev zip unzip
+RUN docker-php-ext-install zip 
 #RUN docker-php-ext-install zlib 
+RUN docker-php-ext-enable zip
 
 # Support CURL
 #RUN apt-get install --no-install-recommends -y curl
@@ -47,12 +48,15 @@ RUN docker-php-ext-enable mysqli
 #RUN docker-php-ext-install date
 #RUN docker-php-ext-install dom
 #RUN docker-php-ext-install filter 
-#RUN docker-php-ext-install gd 
 #RUN docker-php-ext-install gettext
 #RUN docker-php-ext-install hash
 #RUN docker-php-ext-install iconv
 #RUN docker-php-ext-install pcntl
 #RUN docker-php-ext-install pcre
+
+# Graphics
+#RUN docker-php-ext-install gd 
+#RUN docker-php-ext-enable gd
 
 # PDO
 #RUN docker-php-ext-install PDO 
@@ -75,21 +79,15 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c06277
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
-
-# toolse
-COPY bin/ /var/www/
-
-
-
-# Build
-COPY html/ /var/www/html/
 ENV COMPOSER_ALLOW_SUPERUSER 1
-
 COPY composer.json /var/www/
 RUN php composer.phar install --no-plugins --no-scripts
 ENV COMPOSER_ALLOW_SUPERUSER 0
 WORKDIR /var/www/html
 
+# files
+COPY bin/ /var/www/
+COPY html/ /var/www/html/
 
 # Remove unused
 RUN rm -rf /var/lib/apt/lists/\*

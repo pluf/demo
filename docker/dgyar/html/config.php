@@ -59,15 +59,15 @@ return array(
         'RestLog_Middleware_Audit'
     ),
     
-    'mimetypes_db' =>  __DIR__ . '/storage/etc/mime.types',
+    'mimetypes_db' =>  '/var/www/storage/etc/mime.types',
     'languages' => array(
         'fa',
         'en'
     ),
-    'tmp_folder' =>  __DIR__ . '/storage/var/tmp',
+    'tmp_folder' =>  '/tmp',
     'template_folders' => array(
-        __DIR__ . '/storage/templates',
-        __DIR__ . '/vendor/pluf/seo/src/Seo/templates'
+        '/var/www/storage/templates',
+        '/var/www/vendor/pluf/seo/src/Seo/templates'
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
@@ -75,26 +75,26 @@ return array(
         'tenant' => 'Pluf_Template_Tag_Tenant',
         'setting' => 'Tenant_Template_Tag_Setting'
     ),
-    'upload_path' =>  __DIR__ . '/storage/tenant',
+    'upload_path' =>  '/var/www/storage/tenant',
     'upload_max_size' => 524288000,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
     
     'secret_key' => '5a8d7e0f2aad8bdab8f6eef725412850',
     'user_account_auto_activate' => true,
-    'user_avatar_default' =>  __DIR__ . '/storage/var/avatar.svg',
+    'user_avatar_default' =>  '/var/www/storage/var/avatar.svg',
     'user_avatra_max_size' => 2097152,
     'log_delayed' => true,
     'log_handler' => 'Pluf_Log_File',
     'log_level' => Pluf_Log::ERROR,
-    'pluf_log_file' => __DIR__ . '/storage/var/logs/pluf.log',
+    'pluf_log_file' => '/var/www/storage/var/logs/pluf.log',
     
     'db_engine' => 'MySQL',
     
     'db_version' => '5.5.33',
     'db_login' => 'root',
     'db_password' => '',
-    'db_server' => 'localhost',
+    'db_server' => '172.17.0.2',
     'db_database' => 'demo4',
     'db_table_prefix' => '',
     
