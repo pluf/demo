@@ -1,0 +1,24 @@
+version: '1'
+services:
+  mysql:
+    build:
+      context: dgyar-mysql/
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    networks:
+      - elk
+  pluf:
+    build:
+      context: dgyar/
+    volumes:
+      - /local/storage:/var/www/storage
+    ports:
+      - "80:80"
+    networks:
+      - elk
+    depends_on:
+      - mysql
+networks:
+  elk:
+    driver: bridge

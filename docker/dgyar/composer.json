@@ -1,0 +1,50 @@
+{
+	"name" : "pluf/demo",
+	"description" : "A simple demo project",
+	"type" : "project",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Mostafa Barmshory",
+			"email" : "mostafa.barmshory@dpq.co.ir",
+			"homepage" : "http://dpq.co.ir",
+			"role" : "developer"
+		}, {
+			"name" : "Mohammad Hadi Mansouri",
+			"email" : "mohammad.hadi.mansouri@dpq.co.ir",
+			"homepage" : "http://dpq.co.ir",
+			"role" : "developer"
+		}
+	],
+	"minimum-stability" : "stable",
+	"prefer-stable" : true,
+	"require" : {
+		"pluf/bank" : "^4.0.0",
+		"pluf/cache" : "^4.0.0",
+		"pluf/captcha" : "^4.0.0",
+		"pluf/cms" : "^4.0.0",
+		"pluf/core" : "^4.0.0",
+		"pluf/geo" : "^4.0.0",
+		"pluf/http2" : "^4.0.0",
+		"pluf/marketplace" : "^4.0.0",
+		"pluf/monitor" : "^4.0.0",
+		"pluf/restlog" : "^4.0.0",
+		"pluf/seo" : "^4.0.0",
+		"pluf/shop" : "^4.0.0",
+		"pluf/supertenant" : "^4.0.0",
+		"pluf/tenant" : "^4.0.0",
+		"pluf/user" : "^4.0.0",
+		"pluf/workflow" : "^4.0.0"
+	},
+	"homepage" : "https://github.com/pluf/demo",
+	"support" : {
+		"email" : "info@pluf.ir",
+		"issues" : "https://github.com/pluf/demo/issues",
+		"wiki" : "https://github.com/pluf/demo/wiki",
+		"source" : "https://github.com/pluf/demo"
+	},
+	"keywords" : [
+		"pluf",
+		"site",
+		"demo"
+	]
+}
