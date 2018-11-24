@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+  mysql:
+    image: dgyar-db:1.0
+    build:
+      context: dgyar-mysql/
+      labels:
+        com.dgyar.description: "Data node"
+        com.dgyar.department: "IT"
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    networks:
+      - dgyar
+  pluf:
+    image: dgyar:1.0
+    build:
+      context: dgyar/
+      labels:
+        com.dgyar.description: "Public webapp"
+        com.dgyar.department: "IT"
+    volumes:
+      - /local/storage:/var/www/storage
+    ports:
+      - "80:80"
+    networks:
+      - dgyar
+    depends_on:
+      - mysql
+networks:
+  dgyar:
+    driver: bridge
