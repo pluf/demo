@@ -1,7 +1,6 @@
 version: '3.3'
 services:
   mysql:
-    image: dgyar-db:1.0
     build:
       context: dgyar-mysql/
       labels:
@@ -13,7 +12,6 @@ services:
     networks:
       - dgyar
   pluf:
-    image: dgyar:1.0
     build:
       context: dgyar/
       labels:
@@ -29,4 +27,3 @@ services:
       - mysql
 networks:
   dgyar:
-    driver: bridge
