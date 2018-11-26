@@ -94,8 +94,8 @@ return array(
     'db_version' => '5.5.33',
     'db_login' => 'root',
     'db_password' => '',
-    'db_server' => '172.17.0.2',
-    'db_database' => 'demo4',
+    'db_server' => 'mysql',
+    'db_database' => 'dgyar',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -103,10 +103,9 @@ return array(
     'user_profile_class' => 'User_Profile',
     
     'tenant_default' => 'www',
-//     'tenant_default' => 'test',
     'multitenant' => true,
     'bank_debug' => false,
-    'migrate_allow_web' => true,
+    'migrate_allow_web' => false,
     
     'orm.typecasts' => array(
         'Geo_DB_Field_Polygon' => array(

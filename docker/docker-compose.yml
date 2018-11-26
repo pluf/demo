@@ -6,9 +6,17 @@ services:
       labels:
         com.dgyar.description: "Data node"
         com.dgyar.department: "IT"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=dgyar
+#      - MYSQL_USER=dgyar@pluf
+#      - MYSQL_PASSWORD=dgyar
+      - MYSQL_DATABASE=dgyar
+      - MYSQL_ROOT_HOST=%
     ports:
-      - "5000:5000"
-      - "9600:9600"
+      - "3306:3306"
     networks:
       - dgyar
   pluf:
