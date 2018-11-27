@@ -1,30 +1,24 @@
-version: '3.3'
+version: "3.3"
 services:
   mysql:
     build:
       context: dgyar-mysql/
-      labels:
-        com.dgyar.description: "Data node"
-        com.dgyar.department: "IT"
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
+    labels:
+      com.dgyar.description: "Data node"
+      com.dgyar.department: "IT"
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - MYSQL_ROOT_PASSWORD=dgyar
-#      - MYSQL_USER=dgyar@pluf
-#      - MYSQL_PASSWORD=dgyar
-      - MYSQL_DATABASE=dgyar
-      - MYSQL_ROOT_HOST=%
-    ports:
-      - "3306:3306"
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: plufdb
+      MYSQL_USER: pluf
+      MYSQL_PASSWORD: password
     networks:
       - dgyar
   pluf:
     build:
       context: dgyar/
-      labels:
-        com.dgyar.description: "Public webapp"
-        com.dgyar.department: "IT"
+    labels:
+      com.dgyar.description: "Public webapp"
+      com.dgyar.department: "IT"
     volumes:
       - /local/storage:/var/www/storage
     ports:
