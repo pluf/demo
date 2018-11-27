@@ -92,10 +92,10 @@ return array(
     'db_engine' => 'MySQL',
     
     'db_version' => '5.5.33',
-    'db_login' => 'root',
-    'db_password' => '',
-    'db_server' => '172.17.0.2',
-    'db_database' => 'demo4',
+    'db_login' => 'pluf',
+    'db_password' => 'password',
+    'db_server' => 'mysql',
+    'db_database' => 'plufdb',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
