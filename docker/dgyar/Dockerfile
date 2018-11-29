@@ -79,16 +79,31 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c06277
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
+# install jre
+RUN apt-get install --no-install-recommends -y  default-jre
+RUN java --version
+
+WORKDIR /var/www
 ENV COMPOSER_ALLOW_SUPERUSER 1
 COPY composer.json /var/www/
 RUN php composer.phar install --no-plugins --no-scripts
 ENV COMPOSER_ALLOW_SUPERUSER 0
-WORKDIR /var/www/html
 
 # files
-COPY bin/ /var/www/
+COPY etc/ /var/www/etc/
 COPY html/ /var/www/html/
+COPY lib/ /var/www/lib/
+COPY logs/ /var/www/logs/
+COPY sql/ /var/www/sql/
+COPY storage/ /var/www/storage/
+COPY storage/ /var/www/storage/
+COPY flyway /var/www/
+COPY flyway.conf /var/www/
+COPY README.md /var/www/
 
 # Remove unused
 RUN rm -rf /var/lib/apt/lists/\*
 RUN docker-php-source delete
+
+# Change directory to the html
+WORKDIR /var/www/html

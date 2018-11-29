@@ -12,6 +12,8 @@ composer-setup.php
 
 # Project
 storage/tenant
+/bin/vendor/
+/bin/composer.lock
 
 # KDE
 .directory
