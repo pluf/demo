@@ -1,7 +1,4 @@
 <?php
-// TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
-// Pluf::loadFunction('Geo_DB_PointToDB');
-
 return array(
     'debug' => false,
     
@@ -20,24 +17,10 @@ return array(
         'Tenant',
         'SuperTenant',
         'Bank',
-//         'Backup',
         'CMS',
-//         'Collection',
-//         'Captcha',
-//         'Cache',
-//         'Geo',
-//         'Spa',
         'Seo',
-//         'Assort',
         'RestLog',
-//         'Discount',
-//         'SDP',
-// //         'Calendar',
-// //         'Book',
-        'Marketplace',
-//         'ELearn',
         'Shop',
-//         'Mall'
     ),
     'spas'=> array(),
     'middleware_classes' => array(
@@ -59,7 +42,7 @@ return array(
         'RestLog_Middleware_Audit'
     ),
     
-    'mimetypes_db' =>  '/var/www/storage/etc/mime.types',
+    'mimetypes_db' =>  '/var/www/etc/mime.types',
     'languages' => array(
         'fa',
         'en'
@@ -75,22 +58,20 @@ return array(
         'tenant' => 'Pluf_Template_Tag_Tenant',
         'setting' => 'Tenant_Template_Tag_Setting'
     ),
-    'upload_path' =>  '/var/www/storage/tenant',
+    'upload_path' =>  '/var/www/storage',
     'upload_max_size' => 524288000,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
     
     'secret_key' => '5a8d7e0f2aad8bdab8f6eef725412850',
     'user_account_auto_activate' => true,
-    'user_avatar_default' =>  '/var/www/storage/var/avatar.svg',
     'user_avatra_max_size' => 2097152,
     'log_delayed' => true,
     'log_handler' => 'Pluf_Log_File',
     'log_level' => Pluf_Log::ERROR,
-    'pluf_log_file' => '/var/www/storage/var/logs/pluf.log',
+    'pluf_log_file' => '/var/www/logs/pluf.log',
     
     'db_engine' => 'MySQL',
-    
     'db_version' => '5.5.33',
     'db_login' => 'pluf',
     'db_password' => 'password',
@@ -103,10 +84,9 @@ return array(
     'user_profile_class' => 'User_Profile',
     
     'tenant_default' => 'www',
-//     'tenant_default' => 'test',
     'multitenant' => true,
     'bank_debug' => false,
-    'migrate_allow_web' => true,
+    'migrate_allow_web' => false,
     
     'orm.typecasts' => array(
         'Geo_DB_Field_Polygon' => array(
