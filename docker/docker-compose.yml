@@ -1,0 +1,31 @@
+version: "3.3"
+services:
+  mysql:
+    build:
+      context: dgyar-mysql/
+    labels:
+      com.dgyar.description: "Data node"
+      com.dgyar.department: "IT"
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: plufdb
+      MYSQL_USER: pluf
+      MYSQL_PASSWORD: password
+    networks:
+      - dgyar
+  pluf:
+    build:
+      context: dgyar/
+    labels:
+      com.dgyar.description: "Public webapp"
+      com.dgyar.department: "IT"
+    volumes:
+      - /local/storage:/var/www/storage
+    ports:
+      - "80:80"
+    networks:
+      - dgyar
+    depends_on:
+      - mysql
+networks:
+  dgyar:

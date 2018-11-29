@@ -1,0 +1,24 @@
+# Eclipse
+.project
+.settings
+/.buildpath
+
+# Composer
+/vendor/
+# composer.lock
+composer-setup.php
+# NOTE: composr.phar is required int build process
+#composer.phar
+
+# Project
+storage/tenant
+/bin/vendor/
+/bin/composer.lock
+
+# KDE
+.directory
+
+# GNOME
+/wget-log
+/.composer.json.swp
+/composer.lock
