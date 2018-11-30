@@ -115,3 +115,11 @@ RUN docker-php-source delete
 # Change directory to the html
 WORKDIR /var/www/html
 CMD ["/var/www/dgyar.sh"]
+
+# enable PHP mode
+RUN a2enmod rewrite
+#RUN a2enmod zlib
+#RUN a2enmod gzip
+
+
+
