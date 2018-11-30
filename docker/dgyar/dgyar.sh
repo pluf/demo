@@ -21,8 +21,12 @@ until [ $exit_status -eq 1 ] || [ $exit_status -eq 0 ]; do
 	exit_status=$?
 	echo $exit_status 
 done
-./flyway -X migrate
+if [ $exit_status -ne 0 ]; then
+	./flyway migrate
+fi
 
+chmod 777 /var/www/storage/
+chmod 777 /var/www/logs/
 
 # Run Apcache2 froground application
 cd "/var/www/html"

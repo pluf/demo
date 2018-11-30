@@ -1,6 +1,6 @@
 <?php
 return array(
-    'debug' => false,
+    'debug' => true,
     
     'general_domain' => 'dgyar.com',
     'general_admin_email' => array(

@@ -99,13 +99,14 @@ COPY lib/ /var/www/lib/
 COPY logs/ /var/www/logs/
 COPY sql/ /var/www/sql/
 COPY storage/ /var/www/storage/
-COPY storage/ /var/www/storage/
 COPY flyway /var/www/
 COPY flyway.conf /var/www/
 COPY README.md /var/www/
 COPY dgyar.sh /var/www/
 RUN chmod +x /var/www/dgyar.sh
 
+RUN chmod 777 /var/www/storage/
+RUN chmod 777 /var/www/logs/
 
 # Remove unused
 RUN rm -rf /var/lib/apt/lists/\*
