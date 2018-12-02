@@ -6,6 +6,8 @@ services:
     labels:
       com.dgyar.description: "Data node"
       com.dgyar.department: "IT"
+    command: --sql_mode=""
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: P@ssw0rd
       MYSQL_DATABASE: plufdb

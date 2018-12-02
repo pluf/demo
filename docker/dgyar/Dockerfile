@@ -9,7 +9,7 @@ MAINTAINER WEBPICH <info@webpich.com>
 # Build process
 ###########################################################
 RUN apt-get update
-		
+	
 
 RUN docker-php-source extract
 
@@ -35,7 +35,13 @@ RUN docker-php-ext-enable mysqli
 #RUN docker-php-ext-install SimpleXML 
 
 # Support ZIP
+RUN echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
 RUN apt-get install --no-install-recommends -y zlib1g-dev zip unzip
+# install jre
+RUN mkdir -p /usr/share/man/man1
+RUN apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java
+RUN java -version
+
 RUN docker-php-ext-install zip 
 #RUN docker-php-ext-install zlib 
 RUN docker-php-ext-enable zip
@@ -79,9 +85,6 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c06277
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
-# install jre
-RUN apt-get install --no-install-recommends -y  default-jre
-RUN java --version
 
 WORKDIR /var/www
 ENV COMPOSER_ALLOW_SUPERUSER 1
@@ -96,10 +99,14 @@ COPY lib/ /var/www/lib/
 COPY logs/ /var/www/logs/
 COPY sql/ /var/www/sql/
 COPY storage/ /var/www/storage/
-COPY storage/ /var/www/storage/
 COPY flyway /var/www/
 COPY flyway.conf /var/www/
 COPY README.md /var/www/
+COPY dgyar.sh /var/www/
+RUN chmod +x /var/www/dgyar.sh
+
+RUN chmod 777 /var/www/storage/
+RUN chmod 777 /var/www/logs/
 
 # Remove unused
 RUN rm -rf /var/lib/apt/lists/\*
@@ -107,3 +114,12 @@ RUN docker-php-source delete
 
 # Change directory to the html
 WORKDIR /var/www/html
+CMD ["/var/www/dgyar.sh"]
+
+# enable PHP mode
+RUN a2enmod rewrite
+#RUN a2enmod zlib
+#RUN a2enmod gzip
+
+
+

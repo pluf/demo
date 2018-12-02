@@ -1,6 +1,6 @@
 {
 	"name" : "pluf/demo",
-	"description" : "A simple demo project",
+	"description" : "Dgyar HTTP access node",
 	"type" : "project",
 	"license" : "MIT",
 	"authors" : [{
