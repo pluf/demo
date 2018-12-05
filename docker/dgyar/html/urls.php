@@ -127,6 +127,12 @@ $api_v2 = array(
         'regex' => '#^/api/v2/shop#',
         'base' => $base,
         'sub' => include 'Shop/urls.php'
+    ),
+    array( // Exchange
+        'app' => 'Exchange',
+        'regex' => '#^/api/v2/exchange#',
+        'base' => $base,
+        'sub' => include 'Exchange/urls.php'
     )
 );
 

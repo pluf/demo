@@ -21,6 +21,7 @@ return array(
         'Seo',
         'RestLog',
         'Shop',
+        'Exchange'
     ),
     'spas'=> array(),
     'middleware_classes' => array(

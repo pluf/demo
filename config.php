@@ -35,7 +35,8 @@ return array(
         'Marketplace',
 //         'ELearn',
         'Shop',
-//         'Mall'
+//         'Mall',
+        'Exchange'
     ),
     'spas'=> array(),
     'middleware_classes' => array(
