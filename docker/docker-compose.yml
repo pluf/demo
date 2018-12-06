@@ -13,6 +13,7 @@ services:
       MYSQL_DATABASE: plufdb
       MYSQL_USER: pluf
       MYSQL_PASSWORD: password
+      MYSQL_ROOT_HOST: '%'
     networks:
       - dgyar
   pluf:
