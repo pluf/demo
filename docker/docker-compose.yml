@@ -16,6 +16,8 @@ services:
       MYSQL_ROOT_HOST: '%'
     networks:
       - dgyar
+    ports:
+      - "3306:3306"
   pluf:
     build:
       context: dgyar/
