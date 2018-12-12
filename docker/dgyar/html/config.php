@@ -74,8 +74,8 @@ return array(
     
     'db_engine' => 'MySQL',
     'db_version' => '5.5.33',
-    'db_login' => 'pluf',
-    'db_password' => 'password',
+    'db_login' => 'root',
+    'db_password' => 'P@ssw0rd',
     'db_server' => 'mysql',
     'db_database' => 'plufdb',
     'db_table_prefix' => '',
