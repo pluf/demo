@@ -28,6 +28,7 @@
 		"pluf/marketplace" : "^4.0.0",
 		"pluf/monitor" : "^4.0.0",
 		"pluf/restlog" : "^4.0.0",
+		"pluf/sdp" : "^4.0.0",
 		"pluf/seo" : "^4.0.0",
 		"pluf/shop" : "^4.0.0",
 		"pluf/supertenant" : "^4.0.0",

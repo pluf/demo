@@ -86,6 +86,12 @@ $api_v2 = array(
         'base' => $base,
         'sub' => include 'Shop/urls.php'
     ),
+    array( // SDP
+        'app' => 'SDP',
+        'regex' => '#^/api/v2/sdp#',
+        'base' => $base,
+        'sub' => include 'SDP/urls.php'
+    ),
     array( // Exchange
         'app' => 'Exchange',
         'regex' => '#^/api/v2/exchange#',

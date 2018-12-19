@@ -29,7 +29,7 @@ return array(
 //         'Assort',
         'RestLog',
 //         'Discount',
-//         'SDP',
+        'SDP',
 // //         'Calendar',
 // //         'Book',
         'Marketplace',
