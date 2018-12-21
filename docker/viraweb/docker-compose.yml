@@ -1,0 +1,34 @@
+version: "3.3"
+services:
+  mysql:
+    build:
+      context: mysql/
+    labels:
+      com.dgyar.description: "Data node"
+      com.dgyar.department: "IT"
+    command: --sql_mode=""
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: plufdb
+      MYSQL_USER: pluf
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_HOST: '%'
+    networks:
+      - viraweb
+  pluf:
+    build:
+      context: pluf/
+    labels:
+      com.dgyar.description: "Public webapp interface"
+      com.dgyar.department: "IT"
+    volumes:
+      - /local/storage:/var/www/storage
+    ports:
+      - "80:80"
+    networks:
+      - viraweb
+    depends_on:
+      - mysql
+networks:
+  viraweb:
