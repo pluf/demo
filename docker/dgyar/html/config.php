@@ -1,11 +1,10 @@
 <?php
-// TODO: Hadi - 1396-04-23: This code should be move to an appropriate place.
-// Pluf::loadFunction('Geo_DB_PointToDB');
-
 return array(
-    'general_domain' => 'pluf.ir',
+    'debug' => true,
+    
+    'general_domain' => 'dgyar.com',
     'general_admin_email' => array(
-        'info@pluf.ir'
+        'info@dgyar.com'
     ),
     
     'installed_apps' => array(
@@ -18,24 +17,10 @@ return array(
         'Tenant',
         'SuperTenant',
         'Bank',
-//         'Backup',
         'CMS',
-//         'Collection',
-//         'Captcha',
-//         'Cache',
-//         'Geo',
-//         'Spa',
         'Seo',
-//         'Assort',
         'RestLog',
-//         'Discount',
-        'SDP',
-// //         'Calendar',
-// //         'Book',
-        'Marketplace',
-//         'ELearn',
         'Shop',
-//         'Mall',
         'Exchange'
     ),
     'spas'=> array(),
@@ -57,17 +42,16 @@ return array(
         'User_Middleware_Space', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
     ),
-    'debug' => true,
     
-    'mimetypes_db' =>  __DIR__ . '/storage/etc/mime.types',
+    'mimetypes_db' =>  '/var/www/etc/mime.types',
     'languages' => array(
         'fa',
         'en'
     ),
-    'tmp_folder' =>  __DIR__ . '/storage/var/tmp',
+    'tmp_folder' =>  '/tmp',
     'template_folders' => array(
-        __DIR__ . '/storage/templates',
-        __DIR__ . '/vendor/pluf/seo/src/Seo/templates'
+        '/var/www/storage/templates',
+        '/var/www/vendor/pluf/seo/src/Seo/templates'
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
@@ -75,27 +59,25 @@ return array(
         'tenant' => 'Pluf_Template_Tag_Tenant',
         'setting' => 'Tenant_Template_Tag_Setting'
     ),
-    'upload_path' =>  __DIR__ . '/storage/tenant',
+    'upload_path' =>  '/var/www/storage',
     'upload_max_size' => 524288000,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
     
     'secret_key' => '5a8d7e0f2aad8bdab8f6eef725412850',
     'user_account_auto_activate' => true,
-    'user_avatar_default' =>  __DIR__ . '/storage/var/avatar.svg',
     'user_avatra_max_size' => 2097152,
     'log_delayed' => true,
     'log_handler' => 'Pluf_Log_File',
     'log_level' => Pluf_Log::ERROR,
-    'pluf_log_file' => __DIR__ . '/storage/var/logs/pluf.log',
+    'pluf_log_file' => '/var/www/logs/pluf.log',
     
     'db_engine' => 'MySQL',
-    
     'db_version' => '5.5.33',
     'db_login' => 'root',
-    'db_password' => '',
-    'db_server' => 'localhost',
-    'db_database' => 'demo4',
+    'db_password' => 'P@ssw0rd',
+    'db_server' => 'mysql',
+    'db_database' => 'plufdb',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -103,10 +85,9 @@ return array(
     'user_profile_class' => 'User_Profile',
     
     'tenant_default' => 'www',
-//     'tenant_default' => 'test',
     'multitenant' => true,
     'bank_debug' => false,
-    'migrate_allow_web' => true,
+    'migrate_allow_web' => false,
     
     'orm.typecasts' => array(
         'Geo_DB_Field_Polygon' => array(
