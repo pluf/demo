@@ -1,7 +1,8 @@
 #!/bin/bash
 
 attempt_counter=0
-max_attempts=5
+max_attempts=10
+sleep_length = 60
 
 # Migrate db
 cd "/var/www"
@@ -15,7 +16,7 @@ until [ $exit_status -eq 1 ] || [ $exit_status -eq 0 ]; do
     fi
     printf '.'
     attempt_counter=$(($attempt_counter+1))
-    sleep 60
+    sleep $sleep_length
     
 	./flyway validate
 	exit_status=$?
