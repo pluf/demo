@@ -112,6 +112,9 @@ RUN chmod 777 /var/www/logs/
 RUN rm -rf /var/lib/apt/lists/\*
 RUN docker-php-source delete
 
+# Disable Apache access.log
+RUN rm /var/log/apache2/access.log
+
 # Change directory to the html
 WORKDIR /var/www/html
 CMD ["/var/www/dgyar.sh"]
@@ -120,6 +123,3 @@ CMD ["/var/www/dgyar.sh"]
 RUN a2enmod rewrite
 #RUN a2enmod zlib
 #RUN a2enmod gzip
-
-
-
