@@ -20,7 +20,9 @@ return array(
         'CMS',
         'Seo',
         'RestLog',
-        'Shop'
+        'Shop',
+        'SDP',
+        'Exchange'
     ),
     'spas'=> array(),
     'middleware_classes' => array(

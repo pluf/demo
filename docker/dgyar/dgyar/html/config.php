@@ -21,6 +21,7 @@ return array(
         'Seo',
         'RestLog',
         'Shop',
+        'SDP',
         'Exchange'
     ),
     'spas'=> array(),

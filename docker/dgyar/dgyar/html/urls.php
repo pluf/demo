@@ -4,65 +4,7 @@ $base = '';
 /*
  * Old APIs
  */
-$api_old = array(
-    // array(
-    // 'app' => 'User',
-    // 'regex' => '#^/api/user#',
-    // 'base' => $base,
-    // 'sub' => include 'User/urls.php'
-    // ),
-    // array(
-    // 'app' => 'Group',
-    // 'regex' => '#^/api/group#',
-    // 'base' => $base,
-    // 'sub' => include 'Group/urls.php'
-    // ),
-    // array(
-    // 'app' => 'Role',
-    // 'regex' => '#^/api/role#',
-    // 'base' => $base,
-    // 'sub' => include 'Role/urls.php'
-    // ),
-    // array( // CMS : Content Management System
-    // 'app' => 'CMS',
-    // 'regex' => '#^/api/cms#',
-    // 'base' => $base,
-    // 'sub' => include 'CMS/urls.php'
-    // ),
-    // array(
-    // 'app' => 'Message',
-    // 'regex' => '#^/api/message#',
-    // 'base' => $base,
-    // 'sub' => include 'Message/urls.php'
-    // ),
-    // array(
-    // 'app' => 'Monitor',
-    // 'regex' => '#^/api/monitor#',
-    // 'base' => $base,
-    // 'sub' => include 'Monitor/urls.php'
-    // ),
-
-    // // Note: Hadi, 1397-03-07: Modules are added as basic
-
-    // array( // Bank
-    // 'app' => 'Bank',
-    // 'regex' => '#^/api/bank#',
-    // 'base' => $base,
-    // 'sub' => include 'Bank/urls.php'
-    // ),
-    // array(
-    // 'app' => 'Collection',
-    // 'regex' => '#^/api/collection#',
-    // 'base' => $base,
-    // 'sub' => include 'Collection/urls.php'
-    // ),
-    // array( // Discount
-    // 'app' => 'Discount',
-    // 'regex' => '#^/api/discount#',
-    // 'base' => $base,
-    // 'sub' => include 'Discount/urls.php'
-    // )
-);
+$api_old = array( );
 
 /*
  * Basic API-V2
@@ -127,6 +69,12 @@ $api_v2 = array(
         'regex' => '#^/api/v2/shop#',
         'base' => $base,
         'sub' => include 'Shop/urls.php'
+    ),
+    array( // SDP
+        'app' => 'SDP',
+        'regex' => '#^/api/v2/sdp#',
+        'base' => $base,
+        'sub' => include 'SDP/urls.php'
     ),
     array( // Exchange
         'app' => 'Exchange',
