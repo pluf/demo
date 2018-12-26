@@ -16,6 +16,12 @@ services:
       MYSQL_ROOT_HOST: '%'
     networks:
       - viraweb
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: volume
+        source: mysql-vol
+        target: /var/lib/mysql
   pluf:
     build:
       context: pluf/
@@ -23,7 +29,12 @@ services:
       com.dgyar.description: "Public webapp interface"
       com.dgyar.department: "IT"
     volumes:
-      - /local/storage:/var/www/storage
+      - type: volume
+        source: plufStorage-vol
+        target: /var/www/storage
+      - type: volume
+        source: plufLog-vol
+        target: /var/www/logs
     ports:
       - "80:80"
     networks:
@@ -32,3 +43,8 @@ services:
       - mysql
 networks:
   viraweb:
+  
+volumes:
+  mysql-vol:
+  plufStorage-vol:
+  plufLog-vol:
