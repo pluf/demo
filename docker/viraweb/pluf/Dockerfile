@@ -116,6 +116,9 @@ RUN docker-php-source delete
 WORKDIR /var/www/html
 CMD ["/var/www/run.sh"]
 
+# Disable Apache access.log
+RUN rm /var/log/apache2/access.log
+
 # enable PHP mode
 RUN a2enmod rewrite
 #RUN a2enmod zlib
