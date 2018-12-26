@@ -4,23 +4,7 @@ $base = '';
 /*
  * Old APIs
  */
-$api_old = array(
-    
-    // // Note: Hadi, 1397-03-07: Modules are added as basic
-
-    // array(
-    // 'app' => 'Collection',
-    // 'regex' => '#^/api/collection#',
-    // 'base' => $base,
-    // 'sub' => include 'Collection/urls.php'
-    // ),
-    // array( // Discount
-    // 'app' => 'Discount',
-    // 'regex' => '#^/api/discount#',
-    // 'base' => $base,
-    // 'sub' => include 'Discount/urls.php'
-    // )
-);
+$api_old = array( );
 
 /*
  * Basic API-V2

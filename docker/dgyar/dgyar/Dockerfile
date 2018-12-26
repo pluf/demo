@@ -123,6 +123,3 @@ CMD ["/var/www/dgyar.sh"]
 RUN a2enmod rewrite
 #RUN a2enmod zlib
 #RUN a2enmod gzip
-
-
-

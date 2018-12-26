@@ -2,9 +2,9 @@
 return array(
     'debug' => true,
     
-    'general_domain' => 'dgyar.com',
+    'general_domain' => 'viraweb123.com',
     'general_admin_email' => array(
-        'info@dgyar.com'
+        'info@viraweb123.ir'
     ),
     
     'installed_apps' => array(
@@ -21,6 +21,7 @@ return array(
         'Seo',
         'RestLog',
         'Shop',
+        'SDP',
         'Exchange'
     ),
     'spas'=> array(),
@@ -74,8 +75,8 @@ return array(
     
     'db_engine' => 'MySQL',
     'db_version' => '5.5.33',
-    'db_login' => 'root',
-    'db_password' => 'P@ssw0rd',
+    'db_login' => 'pluf',
+    'db_password' => 'password',
     'db_server' => 'mysql',
     'db_database' => 'plufdb',
     'db_table_prefix' => '',
