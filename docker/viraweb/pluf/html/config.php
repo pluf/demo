@@ -2,7 +2,7 @@
 return array(
     'debug' => true,
     
-    'general_domain' => 'viraweb123.com',
+    'general_domain' => 'viraweb123.ir',
     'general_admin_email' => array(
         'info@viraweb123.ir'
     ),
