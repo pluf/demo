@@ -22,6 +22,7 @@ until [ $exit_status -eq 1 ] || [ $exit_status -eq 0 ]; do
 	echo $exit_status 
 done
 if [ $exit_status -ne 0 ]; then
+	./flyway repair
 	./flyway migrate
 fi
 
