@@ -17,12 +17,15 @@ until [ $exit_status -eq 1 ] || [ $exit_status -eq 0 ]; do
     attempt_counter=$(($attempt_counter+1))
     sleep 60
     
+    echo "Attempt ${attempt_counter}"
 	./flyway validate
 	exit_status=$?
 	echo $exit_status 
 done
 if [ $exit_status -ne 0 ]; then
+	echo "Flyway repairing..."
 	./flyway repair
+	echo "Flyway migrating..."
 	./flyway migrate
 fi
 
