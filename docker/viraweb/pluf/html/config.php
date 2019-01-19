@@ -24,7 +24,7 @@ return array(
         'SDP',
         'Exchange'
     ),
-    'spas'=> array(),
+    'spas'=> array('amh-shop', 'my-dashboard'),
     'middleware_classes' => array(
         // find tenant
         'Pluf_Middleware_TenantEmpty',
