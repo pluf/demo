@@ -1,6 +1,6 @@
 <?php
 return array(
-    'debug' => true,
+    'debug' => false,
     
     'general_domain' => 'viraweb123.ir',
     'general_admin_email' => array(
@@ -38,7 +38,7 @@ return array(
         'User_Middleware_Session',
         'Pluf_Middleware_Translation',
         'Captcha_Middleware_Verifier', // Must be affter session and tenant
-//         'Seo_Middleware_Render',
+        'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'User_Middleware_Space', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
