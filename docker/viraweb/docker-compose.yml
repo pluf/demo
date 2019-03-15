@@ -13,6 +13,9 @@ services:
       - type: volume
         source: plufStorage-vol
         target: /var/www/storage
+      - type: volume
+        source: sites-enabled-vol
+        target: /var/www/sites-enabled
   mysql:
     build:
       context: mysql/
@@ -48,6 +51,9 @@ services:
       - type: volume
         source: plufLetsencrypt-vol
         target: /var/www/logs
+      - type: volume
+        source: sites-enabled-vol
+        target: /etc/apache2/sites-enabled
     ports:
       - "80:80"
     networks:
@@ -62,3 +68,4 @@ volumes:
   plufStorage-vol:
   plufLog-vol:
   plufLetsencrypt-vol: 
+  sites-enabled-vol: 
