@@ -1,5 +1,21 @@
 version: "3.3"
 services:
+  dms:
+    build:
+      context: dms/
+    labels:
+      com.dgyar.title: "Domain management system"
+      com.dgyar.description: "Create and manages certificates, domains, and dns"
+      com.dgyar.department: "IT"
+    networks:
+      - viraweb
+    volumes:
+      - type: volume
+        source: plufStorage-vol
+        target: /var/www/storage
+      - type: volume
+        source: sites-enabled-vol
+        target: /var/www/sites-enabled
   mysql:
     build:
       context: mysql/
@@ -33,8 +49,11 @@ services:
         source: plufStorage-vol
         target: /var/www/storage
       - type: volume
-        source: plufLog-vol
+        source: plufLetsencrypt-vol
         target: /var/www/logs
+      - type: volume
+        source: sites-enabled-vol
+        target: /etc/apache2/sites-enabled
     ports:
       - "80:80"
     networks:
@@ -48,3 +67,5 @@ volumes:
   mysql-vol:
   plufStorage-vol:
   plufLog-vol:
+  plufLetsencrypt-vol: 
+  sites-enabled-vol: 

@@ -67,7 +67,8 @@ return array(
     'tmp_folder' =>  __DIR__ . '/storage/var/tmp',
     'template_folders' => array(
         __DIR__ . '/storage/templates',
-        __DIR__ . '/vendor/pluf/seo/src/Seo/templates'
+        __DIR__ . '/vendor/pluf/seo/src/Seo/templates',
+        __DIR__ . '/vendor/pluf/bank/src/Bank/templates'
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
@@ -95,7 +96,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'demo4',
+    'db_database' => 'demo5',
     'db_table_prefix' => '',
     
     'mail_backend' => 'mail',
@@ -105,7 +106,7 @@ return array(
     'tenant_default' => 'www',
 //     'tenant_default' => 'test',
     'multitenant' => true,
-    'bank_debug' => false,
+    'bank_debug' => true,
     'migrate_allow_web' => true,
     
     'orm.typecasts' => array(
