@@ -1,12 +1,12 @@
 <?php
 return array(
     'debug' => false,
-    
+
     'general_domain' => 'viraweb123.ir',
     'general_admin_email' => array(
         'info@viraweb123.ir'
     ),
-    
+
     'installed_apps' => array(
         'Pluf',
         'User',
@@ -43,7 +43,7 @@ return array(
         'User_Middleware_Space', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
     ),
-    
+
     'mimetypes_db' =>  '/var/www/etc/mime.types',
     'languages' => array(
         'fa',
@@ -64,7 +64,7 @@ return array(
     'upload_max_size' => 524288000,
     'time_zone' => 'Asia/Tehran',
     'encoding' => 'UTF-8',
-    
+
     'secret_key' => '5a8d7e0f2aad8bdab8f6eef725412850',
     'user_account_auto_activate' => true,
     'user_avatra_max_size' => 2097152,
@@ -72,7 +72,7 @@ return array(
     'log_handler' => 'Pluf_Log_File',
     'log_level' => Pluf_Log::ERROR,
     'pluf_log_file' => '/var/www/logs/pluf.log',
-    
+
     'db_engine' => 'MySQL',
     'db_version' => '5.5.33',
     'db_login' => 'pluf',
@@ -80,16 +80,16 @@ return array(
     'db_server' => 'mysql',
     'db_database' => 'plufdb',
     'db_table_prefix' => '',
-    
+
     'mail_backend' => 'mail',
-    
+
     'user_profile_class' => 'User_Profile',
-    
+
     'tenant_default' => 'www',
     'multitenant' => true,
     'bank_debug' => false,
     'migrate_allow_web' => false,
-    
+
     'orm.typecasts' => array(
         'Geo_DB_Field_Polygon' => array(
             'Geo_DB_GeometryFromDb',
@@ -104,7 +104,18 @@ return array(
             'Geo_DB_PointToDb'
         )
     ),
-    
-    'marketplace.backend' => 'http://marketplace.webpich.com'
+
+    'marketplace.backend' => 'http://marketplace.webpich.com',
+
+    // -------------------------------------------------------------
+    // SEO
+    // -------------------------------------------------------------
+    'seo.prerender.global.url' => 'http://prerender:3000',
+    'seo.prerender.global.token' => 'no-need',
+
+    'seo.prerender.default.enable' => true,
+    'seo.prerender.default.engine' => 'global',
+    'seo.prerender.default.period' => '+7 days',
+    'seo.prerender.default.pattern' => '.*',
 );
 
