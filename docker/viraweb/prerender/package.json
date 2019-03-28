@@ -1,0 +1,15 @@
+{
+  "name": "prerender-alpine",
+  "version": "5.5.1",
+  "description": "lightweight prerender container built on alpine linux",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "prerender": "5.5.1",
+    "html-minifier": "^3.2.15",
+    "pm2": "^2.10.3",
+    "prerender-request-blacklist": "1.0.2"
+  }
+}

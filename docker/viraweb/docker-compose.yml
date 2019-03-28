@@ -1,5 +1,21 @@
 version: "3.3"
 services:
+  prerender:
+    build:
+      context: prerender/
+    labels:
+      com.dgyar.title: "Prerender system"
+      com.dgyar.description: "Create and manages prerendered pabes"
+      com.dgyar.department: "IT"
+    environment:
+      SERVER_DIR: /root
+      CHROME_BIN: /usr/bin/chromium-browser
+      CHROME_PATH: /usr/lib/chromium/
+      PAGE_DONE_CHECK_INTERVAL: 500
+      PAGE_LOAD_TIMEOUT: 20000
+      WAIT_AFTER_LAST_REQUEST: 250
+    networks:
+      - viraweb
   dms:
     build:
       context: dms/
