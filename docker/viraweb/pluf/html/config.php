@@ -110,11 +110,12 @@ return array(
     // -------------------------------------------------------------
     // SEO
     // -------------------------------------------------------------
-    'seo.prerender.global.enable' => true,
     'seo.prerender.global.url' => 'http://prerender:3000',
     'seo.prerender.global.token' => 'no-need',
 
-    'seo.prerender.global.default.period' => '+7 days',
-    'seo.prerender.global.default.pattern' => '.*',
+    'seo.prerender.default.enable' => true,
+    'seo.prerender.default.engine' => 'global',
+    'seo.prerender.default.period' => '+7 days',
+    'seo.prerender.default.pattern' => '.*',
 );
 
