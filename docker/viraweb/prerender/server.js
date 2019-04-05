@@ -3,9 +3,15 @@ const prerender = require('prerender');
 const forwardHeaders = require('./plugins/forwardHeaders');
 const stripHtml = require('./plugins/stripHtml');
 const healthcheck = require('./plugins/healthcheck');
-const removePrefetchTags = require('./plugins/removePrefetchTags');
 const log = require('./plugins/log');
 const consoleDebugger = require('./plugins/consoleDebugger');
+
+// content optimizer
+const removePrefetchTags = require('./plugins/removePrefetchTags');
+const removeAngularjs = require('./plugins/removeAngularjs');
+const removeScriptTags = require('./plugins/removeScriptTags');
+const removeStyle = require('./plugins/removeStyle');
+const removeComment = require('./plugins/removeComment');
 
 const options = {
 		pageDoneCheckInterval: process.env.PAGE_DONE_CHECK_INTERVAL || 500,
@@ -25,12 +31,18 @@ console.log('Starting with options:', options);
 
 const server = prerender(options);
 
+// remove 
+server.use(removeStyle);
+server.use(removeComment);
+server.use(removeScriptTags);
+server.use(removePrefetchTags);
+server.use(removeAngularjs);
+
 server.use(log);
 server.use(healthcheck('_health'));
 server.use(forwardHeaders);
 server.use(prerender.blockResources());
 server.use(prerender.removeScriptTags());
-server.use(removePrefetchTags);
 server.use(prerender.httpHeaders());
 if (process.env.DEBUG_PAGES) {
 	server.use(consoleDebugger);
