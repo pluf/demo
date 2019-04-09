@@ -2,7 +2,7 @@
 
 attempt_counter=0
 max_attempts=10
-sleep_length = 60
+sleep_length=60
 
 # Migrate db
 cd "/var/www"
