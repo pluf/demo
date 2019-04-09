@@ -76,12 +76,58 @@ services:
       - viraweb
     depends_on:
       - mysql
+  # Backup service
+  volumerize:
+    container_name: volumerize
+    image: blacklabelops/volumerize
+    restart: unless-stopped
+    environment:
+        - 'TZ=Asia/Tehran'
+        - 'VOLUMERIZE_SOURCE=/source'
+        - 'VOLUMERIZE_TARGET=file:///backup'
+        - 'VOLUMERIZE_JOBBER_TIME=0 0 3 * * *'
+        - 'VOLUMERIZE_FULL_IF_OLDER_THAN=7D'
+        - 'JOB_NAME2=RemoveOldBackups'
+        - 'JOB_COMMAND2=/etc/volumerize/remove-older-than 7D --force'
+        - 'JOB_TIME2=0 0 * * * *'
+    # Add all service volume to volumerize
+    # NOTE: for restore data, first stop all container and delete :ro 
+    volumes:
+        - type: volume
+          source: mysql-vol
+          target: /source/mysql:ro
+        - type: volume
+          source: plufLetsencrypt-vol 
+          target: /source/letscript:ro
+        - type: volume
+          source: plufLog-vol
+          target: /source/pluflog:ro
+        - type: volume
+          source: plufStorage-vol
+          target: /source/plufstorage:ro
+        - type: volume
+          source: sites-enabled-vol
+          target: /source/siteenable:ro
+        - type: bind
+          source: /backup
+          target: /backup
+        - type: volume
+          source: backup-cache
+          target: /volumerize-cache
+
 networks:
   viraweb:
   
 volumes:
   mysql-vol:
+    external: false
   plufStorage-vol:
+    external: false
   plufLog-vol:
-  plufLetsencrypt-vol: 
-  sites-enabled-vol: 
+    external: false
+  plufLetsencrypt-vol:
+    external: false
+  sites-enabled-vol:
+    external: false
+  backup-cache:
+    external: false
