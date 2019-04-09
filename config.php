@@ -124,6 +124,17 @@ return array(
         )
     ),
     
-    'marketplace.backend' => 'http://marketplace.webpich.com'
+    'marketplace.backend' => 'http://marketplace.webpich.com',
+    
+    // -------------------------------------------------------------
+    // SEO
+    // -------------------------------------------------------------
+    'seo.prerender.global.url' => 'http://prerender:3000',
+    'seo.prerender.global.token' => 'no-need',
+    
+    'seo.prerender.default.enable' => true,
+    'seo.prerender.default.engine' => 'global',
+    'seo.prerender.default.period' => '+7 days',
+    'seo.prerender.default.pattern' => '.*',
 );
 
