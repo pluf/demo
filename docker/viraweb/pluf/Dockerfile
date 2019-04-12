@@ -3,19 +3,23 @@
 # SEE: https://github.com/docker-library/php/blob/67efd89c36bf15cb5ba096213e0536b2cab5eb38/7.2/stretch/apache/Dockerfile
 #
 FROM php:7.2-apache
+MAINTAINER ViraWeb123 (info@viraweb123.com)
 
-MAINTAINER ViraWeb123 <info@viraweb123.com>
 ###########################################################
 # Build process
 ###########################################################
 RUN apt-get update
-	
-
 RUN docker-php-source extract
 
 RUN docker-php-ext-install ctype
-#RUN docker-php-ext-install openssl
-RUN docker-php-ext-enable ctype
+RUN apt-get install -y --no-install-recommends \
+	libssl-dev \
+	libcurl4-openssl-dev 
+RUN \
+    docker-php-ext-install openssl || \
+    ( mv /usr/src/php/ext/openssl/config0.m4 /usr/src/php/ext/openssl/config.m4 && \
+        docker-php-ext-install openssl )
+RUN docker-php-ext-enable ctype openssl
 
 # JSON (is loaded)
 RUN docker-php-ext-install json

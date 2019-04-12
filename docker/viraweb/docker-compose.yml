@@ -48,8 +48,8 @@ services:
       MYSQL_ROOT_HOST: '%'
     networks:
       - viraweb
-    ports:
-      - "3306:3306"
+#    ports:
+#      - "3306:3306"
     volumes:
       - type: volume
         source: mysql-vol
@@ -72,6 +72,7 @@ services:
         target: /etc/apache2/sites-enabled
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - viraweb
     depends_on:
