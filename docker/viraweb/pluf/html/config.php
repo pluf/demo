@@ -52,7 +52,8 @@ return array(
     'tmp_folder' =>  '/tmp',
     'template_folders' => array(
         '/var/www/storage/templates',
-        '/var/www/vendor/pluf/seo/src/Seo/templates'
+        '/var/www/vendor/pluf/seo/src/Seo/templates',
+        '/var/www/vendor/pluf/bank/src/Bank/templates'
     ),
     'template_tags' => array(
         'now' => 'Pluf_Template_Tag_Now',
