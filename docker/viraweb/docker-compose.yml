@@ -118,6 +118,7 @@ services:
 
 networks:
   viraweb:
+    driver: host
   
 volumes:
   mysql-vol:
