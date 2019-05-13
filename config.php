@@ -3,7 +3,7 @@
 // Pluf::loadFunction('Geo_DB_PointToDB');
 
 return array(
-    'general_domain' => 'pluf.ir',
+    'general_domain' => 'localhost:8080',
     'general_admin_email' => array(
         'info@pluf.ir'
     ),
@@ -46,6 +46,7 @@ return array(
         'Pluf_Middleware_TenantFromDomain',
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
+        //'Pluf_Middleware_TenantRedirect', // It redirects to main tenant if request tenant is not valid
         // Load user and session
         'Pluf_Middleware_Session',
         'User_Middleware_BasicAuth',
