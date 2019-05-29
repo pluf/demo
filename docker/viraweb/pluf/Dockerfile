@@ -127,6 +127,7 @@ RUN rm /var/log/apache2/access.log
 RUN a2enmod rewrite
 #RUN a2enmod zlib
 #RUN a2enmod gzip
+RUN a2enmod ssl
 
 
 
