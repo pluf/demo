@@ -3,6 +3,9 @@ services:
   prerender:
     build:
       context: prerender/
+    deploy:
+      restart_policy:
+        condition: on-failure
     labels:
       com.dgyar.title: "Prerender system"
       com.dgyar.description: "Create and manages prerendered pabes"
@@ -19,6 +22,9 @@ services:
   dms:
     build:
       context: dms/
+    deploy:
+      restart_policy:
+        condition: on-failure
     labels:
       com.dgyar.title: "Domain management system"
       com.dgyar.description: "Create and manages certificates, domains, and dns"
@@ -35,6 +41,9 @@ services:
   mysql:
     build:
       context: mysql/
+    deploy:
+      restart_policy:
+        condition: on-failure
     labels:
       com.dgyar.description: "Data node"
       com.dgyar.department: "IT"
@@ -57,6 +66,9 @@ services:
   pluf:
     build:
       context: pluf/
+    deploy:
+      restart_policy:
+        condition: on-failure
     labels:
       com.dgyar.description: "Public webapp interface"
       com.dgyar.department: "IT"
