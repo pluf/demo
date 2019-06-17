@@ -87,6 +87,15 @@ return array(
 
     'user_profile_class' => 'User_Profile',
 
+    'subdomain_min_length' => 5,
+    'reserved_subdomains' => array(
+        'www',
+        'blog',
+        'developer',
+        'developers',
+        'market',
+        'marketplace'
+    ),
     'tenant_default' => 'www',
     'multitenant' => true,
     'bank_debug' => false,
