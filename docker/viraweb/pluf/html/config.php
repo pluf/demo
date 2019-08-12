@@ -116,7 +116,7 @@ return array(
         )
     ),
 
-    'marketplace.backend' => 'http://marketplace.webpich.com',
+    'marketplace.backend' => 'http://marketplace.viraweb123.ir',
 
     // -------------------------------------------------------------
     // SEO
