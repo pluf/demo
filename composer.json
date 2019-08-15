@@ -35,7 +35,8 @@
 		"pluf/tenant" : "5.8.x",
 		"pluf/user" : "5.8.x",
 		"pluf/workflow" : "5.8.x",
-		"pluf/exchange" : "5.8.x"
+		"pluf/exchange" : "5.8.x",
+		"pluf/tms" : "5.8.x"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
