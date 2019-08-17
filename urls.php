@@ -120,7 +120,7 @@ $api_v2_optional = array(
         'app' => 'TMS',
         'regex' => '#^/api/v2/tms#',
         'base' => $base,
-        'sub' => include 'TMS/urls-v2.php'
+        'sub' => include 'TMS/urls.php'
     )
 );
 
