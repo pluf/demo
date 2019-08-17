@@ -115,6 +115,12 @@ $api_v2_optional = array(
         'regex' => '#^/api/v2/super-tenant#',
         'base' => $base,
         'sub' => include 'SuperTenant/urls-v2.php'
+    ),
+    array( // TMS
+        'app' => 'TMS',
+        'regex' => '#^/api/v2/tms#',
+        'base' => $base,
+        'sub' => include 'TMS/urls.php'
     )
 );
 
