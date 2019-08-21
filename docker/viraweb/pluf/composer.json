@@ -1,6 +1,7 @@
 {
 	"name" : "pluf/demo",
-	"description" : "A simple demo project",
+	"description" : "ViraWeb HTTP access node",
+	"version" : "5.4.0",
 	"type" : "project",
 	"license" : "MIT",
 	"authors" : [{
@@ -35,8 +36,7 @@
 		"pluf/tenant" : "5.8.x",
 		"pluf/user" : "5.8.x",
 		"pluf/workflow" : "5.8.x",
-		"pluf/exchange" : "5.8.x",
-		"pluf/tms" : "5.8.x"
+		"pluf/exchange" : "5.8.x"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
