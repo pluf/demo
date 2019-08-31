@@ -17,7 +17,7 @@ return array(
         'Tenant',
         'SuperTenant',
         'Bank',
-        // 'Backup',
+        'Backup',
         'CMS',
         // 'Collection',
         // 'Captcha',
