@@ -18,6 +18,7 @@
 	"minimum-stability" : "stable",
 	"prefer-stable" : true,
 	"require" : {
+		"pluf/backup" : "5.9.x",
 		"pluf/bank" : "5.9.x",
 		"pluf/cache" : "5.9.x",
 		"pluf/captcha" : "5.9.x",
