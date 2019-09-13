@@ -121,6 +121,12 @@ $api_v2_optional = array(
         'regex' => '#^/api/v2/tms#',
         'base' => $base,
         'sub' => include 'TMS/urls.php'
+    ),
+    array( // SuperTms
+        'app' => 'SuperTms',
+        'regex' => '#^/api/v2/super-tms#',
+        'base' => $base,
+        'sub' => include 'SuperTms/urls.php'
     )
 );
 

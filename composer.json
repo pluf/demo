@@ -37,7 +37,8 @@
 		"pluf/user" : "5.11.x",
 		"pluf/workflow" : "5.11.x",
 		"pluf/exchange" : "5.11.x",
-		"pluf/tms" : "5.11.x"
+		"pluf/tms" : "5.11.x",
+		"pluf/super-tms" : "5.11.x"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
