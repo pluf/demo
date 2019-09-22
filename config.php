@@ -37,7 +37,9 @@ return array(
         // 'Mall',
         'Exchange',
         'TMS',
-        'SuperTms'
+        'SuperTms',
+        'Jms',
+        'SuperJms'
     ),
     'spas' => array(),
     'middleware_classes' => array(

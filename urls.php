@@ -97,7 +97,19 @@ $api_v2 = array(
         'regex' => '#^/api/v2/exchange#',
         'base' => $base,
         'sub' => include 'Exchange/urls.php'
-    )
+    ),
+//     array( // Exchange
+//         'app' => 'Jms',
+//         'regex' => '#^/api/v2/jms#',
+//         'base' => $base,
+//         'sub' => include 'Jms/urls.php'
+//     ),
+//     array( // Exchange
+//         'app' => 'SuperJms',
+//         'regex' => '#^/api/v2/superjms#',
+//         'base' => $base,
+//         'sub' => include 'SuperJms/urls.php'
+//     )
 );
 
 /*
