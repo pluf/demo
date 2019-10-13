@@ -98,18 +98,12 @@ $api_v2 = array(
         'base' => $base,
         'sub' => include 'Exchange/urls.php'
     ),
-//     array( // Exchange
-//         'app' => 'Jms',
-//         'regex' => '#^/api/v2/jms#',
-//         'base' => $base,
-//         'sub' => include 'Jms/urls.php'
-//     ),
-//     array( // Exchange
-//         'app' => 'SuperJms',
-//         'regex' => '#^/api/v2/superjms#',
-//         'base' => $base,
-//         'sub' => include 'SuperJms/urls.php'
-//     )
+    array( // Jms
+        'app' => 'Jms',
+        'regex' => '#^/api/v2/jms#',
+        'base' => $base,
+        'sub' => include Pluf\Jms\Module::urlsPath
+    )
 );
 
 /*
@@ -139,6 +133,12 @@ $api_v2_optional = array(
         'regex' => '#^/api/v2/super-tms#',
         'base' => $base,
         'sub' => include 'SuperTms/urls.php'
+    ),
+    array( // SuperJms
+        'app' => 'SuperJms',
+        'regex' => '#^/api/v2/superjms#',
+        'base' => $base,
+        'sub' => include Pluf\SuperJms\Module::urlsPath
     )
 );
 

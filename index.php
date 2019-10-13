@@ -14,17 +14,16 @@ error_reporting(E_ALL);
 // try {
 //     $m = new Pluf_Migration(Pluf::f('installed_apps'));
 //     $m->install();
-//     $view = new SuperTenant_Views();
-//     $request = new Pluf_HTTP_Request('/');
-//     $request->tenant = new Pluf_Tenant(1);
-//     $request->REQUEST = array(
-//         'title' => 'Main tenant',
-//         'description' => 'Description of the main tenant',
-//         'domain' => 'pluf.ir',
-//         'subdomain' => 'www',
-//         'validate' => true
-//     );
-//     $view->create($request, array());
+//     // Create default tenant
+//     $tenant = new Pluf_Tenant(1);
+//     $tenant->title = 'Main tenant';
+//     $tenant->description = 'Description of the main tenant';
+//     $tenant->domain = 'pluf.ir';
+//     $tenant->subdomain = 'www';
+//     $tenant->validate = true;
+//     $tenant->create();
+//     // Initiate default tenant
+//     Tenant_Service::initiateTenant($tenant);
 // } catch (Exception $e) {
 //     var_export($e);
 // }
