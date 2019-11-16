@@ -103,6 +103,12 @@ $api_v2 = array(
         'regex' => '#^/api/v2/jms#',
         'base' => $base,
         'sub' => include Pluf\Jms\Module::urlsPath
+    ),
+    array( // Backup
+        'app' => 'Backup',
+        'regex' => '#^/api/v2/backup#',
+        'base' => $base,
+        'sub' => Pluf\Backup\Module::urls
     )
 );
 
