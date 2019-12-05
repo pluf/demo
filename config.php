@@ -50,6 +50,7 @@ return array(
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         // 'Pluf_Middleware_TenantRedirect', // It redirects to main tenant if request tenant is not valid
+        'Tenant_Middleware_Verifier', // It should be the last middleware about tenant.
         // Load user and session
         'Pluf_Middleware_Session',
         'User_Middleware_BasicAuth',
