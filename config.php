@@ -50,13 +50,14 @@ return array(
         'Pluf_Middleware_TenantFromSubDomain', // It should be used only in multitenant state
         'Pluf_Middleware_TenantFromConfig',
         // 'Pluf_Middleware_TenantRedirect', // It redirects to main tenant if request tenant is not valid
+        'Tenant_Middleware_Verifier', // It should be the last middleware about tenant.
         // Load user and session
         'Pluf_Middleware_Session',
         'User_Middleware_BasicAuth',
         'User_Middleware_Session',
         'Pluf_Middleware_Translation',
-        'Captcha_Middleware_Verifier', // Must be affter session and tenant
-                                        // 'Seo_Middleware_Render',
+        'Captcha_Middleware_Verifier', // Must be affter session and tenant.
+        // 'Seo_Middleware_Render',
         'Cache_Middleware_RFC7234',
         'User_Middleware_Space', // It should be one of lastest middlewares
         'RestLog_Middleware_Audit'
@@ -100,7 +101,7 @@ return array(
     'db_login' => 'root',
     'db_password' => '',
     'db_server' => 'localhost',
-    'db_database' => 'demo5',
+    'db_database' => 'demo',
     'db_table_prefix' => '',
 
     'mail_backend' => 'mail',
