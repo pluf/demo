@@ -140,7 +140,7 @@ $api_v2_optional = array(
         'base' => $base,
         'sub' => include 'SuperTms/urls.php'
     ),
-    array( // SuperJms
+    array( // Super Jms
         'app' => 'SuperJms',
         'regex' => '#^/api/v2/superjms#',
         'base' => $base,
