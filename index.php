@@ -1,6 +1,9 @@
 <?php
 require 'vendor/autoload.php';
 require 'Pluf.php';
+
+use Pluf\Module;
+
 Pluf::start('config.php');
 
 /*
@@ -28,5 +31,7 @@ error_reporting(E_ALL);
 //     var_export($e);
 // }
 
-Pluf_Dispatcher::dispatch(Pluf_HTTP_URL::getAction(), 'urls.php');
+
+$url = new Pluf_HTTP_URL('mod_rewrite');
+Pluf_Dispatcher::dispatch($url->getAction(), Module::loadControllers());
 
