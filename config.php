@@ -212,6 +212,7 @@ return array(
         'market',
         'marketplace'
     ),
+    'tenant_notfound_url' => 'https://pluf.ir/wb/blog/page/how-config-notfound-tenant',
     
     // -------------------------------------------------------------
     // super-tenant
