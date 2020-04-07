@@ -41,11 +41,9 @@ return array(
 
     'middleware_classes' => array(
         '\Pluf\Middleware\Tenant',
+        '\Pluf\Seo\Middleware\Render',
         'Tenant_Middleware_ResourceAccess',
         'Tenant_Middleware_Verifier', // It should be the last middleware about tenant.
-        
-        '\Pluf\Seo\Middleware\Render',
-        
         // Load user and session
         '\Pluf\Middleware\Session',
         'User_Middleware_BasicAuth',
@@ -106,28 +104,14 @@ return array(
     // -------------------------------------------------------------
     // DB and Data layer (ORM)
     // -------------------------------------------------------------
-    'db_engine' => 'MySQL',
+    'db_engine' => '\Pluf\Db\MySQLEngine',
+    'db_schema' => '\Pluf\Db\MySQLSchema',
     'db_version' => '5.5.33',
     'db_login' => 'pluf',
     'db_password' => 'password',
     'db_server' => '127.0.0.1',
     'db_database' => 'plufdb',
-    'db_table_prefix' => '',
-    
-    'orm.typecasts' => array(
-        'Geo_DB_Field_Polygon' => array(
-            'Geo_DB_GeometryFromDb',
-            'Geo_DB_PolygonToDb'
-        ),
-        'Geo_DB_Field_Geometry' => array(
-            'Geo_DB_GeometryFromDb',
-            'Geo_DB_GeometryToDb'
-        ),
-        'Geo_DB_Field_Point' => array(
-            'Geo_DB_GeometryFromDb',
-            'Geo_DB_PointToDb'
-        )
-    ),
+    'db_schema_table_prefix' => '',
     
     // -------------------------------------------------------------
     // backup
@@ -145,7 +129,7 @@ return array(
     // Bank & Disount
     // -------------------------------------------------------------
     
-    'bank_debug' => false,
+    'bank_debug' => true,
     
     // -------------------------------------------------------------
     // DM (Download manager)
@@ -166,7 +150,7 @@ return array(
     // -------------------------------------------------------------
     // SEO
     // -------------------------------------------------------------
-    'seo_prerender_global_url' => 'http://prerender:3000',
+    'seo_prerender_global_url' => 'http://185.224.139.115:3000',
     'seo_prerender_global_token' => 'no-need',
     
     'seo_prerender_default_enable' => true,
@@ -212,6 +196,7 @@ return array(
         'market',
         'marketplace'
     ),
+    'tenant_notfound_url' => 'https://pluf.ir/wb/blog/page/how-config-notfound-tenant',
     
     // -------------------------------------------------------------
     // super-tenant
