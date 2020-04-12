@@ -81,7 +81,7 @@ return array(
     // -------------------------------------------------------------
     'template_folders' => array(
         __DIR__ . '/storage/templates',
-        __DIR__ . '/vendor/pluf/seo/src/Seo/templates',
+        __DIR__ . '/vendor/pluf/seo/templates',
         __DIR__ . '/vendor/pluf/bank/src/Bank/templates'
     ),
     'template_tags' => array(
