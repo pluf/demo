@@ -41,6 +41,7 @@ return array(
 
     'middleware_classes' => array(
         '\Pluf\Middleware\Tenant',
+        'Tenant_Middleware_DefaultSpaRedirect',
         '\Pluf\Seo\Middleware\Render',
         'Tenant_Middleware_ResourceAccess',
         'Tenant_Middleware_Verifier', // It should be the last middleware about tenant.
