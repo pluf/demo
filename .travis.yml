@@ -25,11 +25,12 @@ install:
   - wget -c -nc --retry-connrefused --tries=0 https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
   - chmod +x coveralls.phar
   - php coveralls.phar --version
-  
-script:
-  - cd tests
-  - php run.php
-  - cd ..
+ 
+# Demo has not test yet 
+# script:
+# - cd tests
+#  - php run.php
+#  - cd ..
 
 after_success:
 # Submit coverage report to Coveralls servers, see .coveralls.yml
