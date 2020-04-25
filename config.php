@@ -41,6 +41,7 @@ return array(
 
     'middleware_classes' => array(
         '\Pluf\Middleware\Tenant',
+        'Tenant_Middleware_DefaultSpaRedirect',
         '\Pluf\Seo\Middleware\Render',
         'Tenant_Middleware_ResourceAccess',
         'Tenant_Middleware_Verifier', // It should be the last middleware about tenant.
@@ -81,7 +82,7 @@ return array(
     // -------------------------------------------------------------
     'template_folders' => array(
         __DIR__ . '/storage/templates',
-        __DIR__ . '/vendor/pluf/seo/src/Seo/templates',
+        __DIR__ . '/vendor/pluf/seo/templates',
         __DIR__ . '/vendor/pluf/bank/src/Bank/templates'
     ),
     'template_tags' => array(
@@ -150,7 +151,7 @@ return array(
     // -------------------------------------------------------------
     // SEO
     // -------------------------------------------------------------
-    'seo_prerender_global_url' => 'http://185.224.139.115:3000',
+    'seo_prerender_global_url' => 'http://prerender.viraweb123.ir',
     'seo_prerender_global_token' => 'no-need',
     
     'seo_prerender_default_enable' => true,
