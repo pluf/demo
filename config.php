@@ -150,7 +150,7 @@ return array(
     // -------------------------------------------------------------
     // SEO
     // -------------------------------------------------------------
-    'seo_prerender_global_url' => 'http://185.224.139.115:3000',
+    'seo_prerender_global_url' => 'http://prerender.viraweb123.ir',
     'seo_prerender_global_token' => 'no-need',
     
     'seo_prerender_default_enable' => true,
