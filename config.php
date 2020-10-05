@@ -36,7 +36,8 @@ return array(
         'Tms',
         'SuperTms',
         'Jms',
-        'SuperJms'
+        'SuperJms',
+        'Vpn'
     ),
 
     'middleware_classes' => array(
