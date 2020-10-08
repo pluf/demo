@@ -54,15 +54,6 @@
 		"site",
 		"demo"
 	],
-	"repositories" : [{
-			"type" : "path",
-			"url" : "../lottery",
-			"name" : "pluf/lottery",
-			"options" : {
-				"symlink" : true
-			}
-		}
-	],
 	"repositories~" : [{
 			"type" : "path",
 			"url" : "../backup",
