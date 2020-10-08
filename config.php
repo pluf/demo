@@ -36,7 +36,9 @@ return array(
         'Tms',
         'SuperTms',
         'Jms',
-        'SuperJms'
+        'SuperJms',
+        'Vpn',
+        'Lottery'
     ),
 
     'middleware_classes' => array(
@@ -215,6 +217,10 @@ return array(
     // -------------------------------------------------------------
     // user
     // -------------------------------------------------------------
+    'user_auth_backends' => array(
+        'User_Auth_ModelBackend',
+        'User_Auth_OAuth2Backend'
+    ),
     'user_account_auto_activate' => true,
     'user_avatra_max_size' => 2097152,
     

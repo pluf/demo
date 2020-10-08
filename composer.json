@@ -38,7 +38,9 @@
 		"pluf/tms" : "6.0.x",
 		"pluf/super-tms" : "6.0.x",
 		"pluf/jms" : "6.0.x",
-		"pluf/superjms" : "6.0.x"
+		"pluf/superjms" : "6.0.x",
+		"pluf/vpn" : "6.0.x",
+		"pluf/lottery" : "6.0.x"
 	},
 	"homepage" : "https://github.com/pluf/demo",
 	"support" : {
